@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tarun Singh — PhD Scholar in Civil Engineering at IIT Roorkee. Research in finite deformation continuum mechanics, viscoelasticity and constitutive modeling.">
+<title>Tarun Singh | IIT Roorkee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#172033;--muted:#667085;--blue:#2457a6;--blue2:#163b73;--line:#e5e9f0;--soft:#f5f7fb;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.03em}.brand span{color:var(--blue)}
+.links{display:flex;gap:24px;font-size:14px;font-weight:600;color:#47536a}.links a:hover{color:var(--blue)}
+.hero{background:linear-gradient(135deg,#f7faff,#fff 55%,#f1f6ff);padding:90px 0 85px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:65px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800;color:var(--blue)}
+h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(50px,7vw,80px);line-height:1.02;letter-spacing:-.04em;margin:14px 0 18px}
+.hero h2{font-size:20px;margin:0 0 18px;color:#344158;font-weight:600}.lead{font-size:18px;color:var(--muted);max-width:700px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 18px;border-radius:8px;font-weight:700;font-size:14px;border:1px solid var(--line);background:#fff}.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.profile-card{background:#fff;border:1px solid var(--line);padding:28px;border-radius:16px;box-shadow:0 16px 45px rgba(27,50,90,.08)}
+.monogram{height:150px;width:150px;border-radius:50%;background:linear-gradient(145deg,var(--blue),var(--blue2));color:#fff;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:52px;margin:0 auto 22px}
+.cardline{border-top:1px solid var(--line);padding-top:16px;margin-top:16px;font-size:14px;color:var(--muted)}.cardline strong{display:block;color:var(--ink)}
+section{padding:82px 0}.section-head{margin-bottom:38px}.kicker{color:var(--blue);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.15em}
+.section-head h2{font-family:"Playfair Display",Georgia,serif;font-size:42px;line-height:1.15;margin:8px 0}.section-head p{color:var(--muted);max-width:780px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}.box{border:1px solid var(--line);border-radius:14px;padding:28px;background:#fff}.box h3{margin-top:0}
+.tags{display:flex;flex-wrap:wrap;gap:9px}.tag{padding:7px 11px;border-radius:999px;background:var(--soft);color:#3c4d67;font-size:13px;font-weight:600}
+.research{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.research article{padding:25px;border:1px solid var(--line);border-radius:14px}.num{color:var(--blue);font-weight:800;font-size:13px}.research h3{margin:8px 0}.research p{color:var(--muted);font-size:14px}
+.pub{border-top:1px solid var(--line);padding:28px 0}.pub:first-child{border-top:0}.pub h3{font-size:18px;line-height:1.45;margin:0 0 8px}.pub p{margin:0;color:var(--muted);font-size:14px}.pub-links{margin-top:10px;font-size:13px;font-weight:700;color:var(--blue)}
+.status{display:inline-block;margin-top:12px;font-size:12px;font-weight:800;padding:5px 9px;border-radius:6px;background:#eef4ff;color:var(--blue)}
+.timeline{border-left:2px solid #dbe3ef;margin-left:8px;padding-left:26px}.item{position:relative;margin-bottom:34px}.item:before{content:"";position:absolute;width:10px;height:10px;background:var(--blue);border-radius:50%;left:-32px;top:8px}.year{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.08em}.item h3{margin:4px 0}.item p{margin:0;color:var(--muted)}
+.contact{background:var(--ink);color:#fff}.contact .section-head p{color:#b9c2d1}.contact .box{background:#202a3c;border-color:#344057}.contact .box p{color:#c5cedd}.contact a{color:#fff;text-decoration:underline;text-decoration-color:#6d92cc}
+footer{background:#111827;color:#9ca7b8;padding:25px 0;font-size:13px}.footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.links{display:none}.hero-grid,.grid2,.research{grid-template-columns:1fr}.hero{padding:65px 0}.hero-grid{gap:40px}section{padding:62px 0}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navin">
+<a class="brand" href="#home">Tarun <span>Singh</span></a>
+<div class="links"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+</div></nav>
 
+<header class="hero" id="home"><div class="wrap hero-grid">
+<div>
+<div class="eyebrow">PhD Scholar · IIT Roorkee</div>
+<h1>Tarun Singh</h1>
+<h2>Finite Deformation · Continuum Mechanics · Viscoelasticity</h2>
+<p class="lead">I work on constitutive modeling of materials undergoing large deformation, with a focus on finite-strain viscoelasticity, evolving natural configurations, rheological models and computational mechanics.</p>
+<div class="buttons"><a class="btn primary" href="#research">Explore my research</a><a class="btn" href="#publications">View publications</a></div>
+</div>
+<aside class="profile-card">
+<div class="monogram">TS</div>
+<strong>PhD Scholar</strong>
+<div class="cardline"><strong>Department of Civil Engineering</strong>Indian Institute of Technology Roorkee</div>
+<div class="cardline"><strong>Research focus</strong>Finite deformation & constitutive mechanics</div>
+</aside>
+</div></header>
+
+<section id="about"><div class="wrap">
+<div class="section-head"><div class="kicker">About</div><h2>Researching how materials deform.</h2>
+<p>My research focuses on continuum-mechanical descriptions of complex material behavior at finite deformation. I am interested in physically motivated constitutive frameworks, rheological models, parameter identification and computational implementation for nonlinear material response.</p></div>
+<div class="grid2">
+<div class="box"><h3>Current position</h3><p><strong>PhD Scholar</strong><br>Department of Civil Engineering<br>Indian Institute of Technology Roorkee</p><p>Supervisor: <strong>Dr. Sandipan Paul</strong></p></div>
+<div class="box"><h3>Research interests</h3><div class="tags"><span class="tag">Finite deformation</span><span class="tag">Continuum mechanics</span><span class="tag">Viscoelasticity</span><span class="tag">Viscoplasticity</span><span class="tag">Constitutive modeling</span><span class="tag">Evolving natural configurations</span><span class="tag">Computational mechanics</span><span class="tag">Rheology</span></div></div>
+</div></div></section>
+
+<section id="research" style="background:var(--soft)"><div class="wrap">
+<div class="section-head"><div class="kicker">Research</div><h2>What I work on</h2></div>
+<div class="research">
+<article><div class="num">01</div><h3>Finite-strain viscoelasticity</h3><p>Constitutive descriptions of rate-dependent materials under large deformation using nonlinear continuum mechanics and internal natural configurations.</p></article>
+<article><div class="num">02</div><h3>Rheological connections</h3><p>Extension of series and parallel rheological concepts from one-dimensional models to finite-deformation frameworks with multiple natural configurations.</p></article>
+<article><div class="num">03</div><h3>Constitutive modeling</h3><p>Development and calibration of material models using experimental data across deformation modes and loading rates.</p></article>
+<article><div class="num">04</div><h3>Computational implementation</h3><p>Numerical integration and finite-element implementation of nonlinear constitutive equations for large-deformation simulations.</p></article>
+</div></div></section>
+
+<section id="publications"><div class="wrap">
+<div class="section-head"><div class="kicker">Publications</div><h2>Selected publications</h2>
+<p>My research publications and preprints on finite-deformation continuum mechanics and viscoelastic constitutive modeling.</p></div>
+
+<div class="pub">
+<h3>On the extension of the concept of rheological connections to a finite deformation framework using multiple natural configurations</h3>
+<p><strong>Tarun Singh, Sandipan Paul</strong> · International Journal of Engineering Science · Volume 212 · Article 104267 · 2025</p>
+<div class="pub-links"><a href="https://doi.org/10.1016/j.ijengsci.2025.104267" target="_blank">DOI / Publisher →</a></div>
+<span class="status">Published</span>
+</div>
+
+<div class="pub">
+<h3>Constitutive modeling of Kelvin–Voigt type viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations</h3>
+<p><strong>Tarun Singh, Sandipan Paul</strong> · International Journal of Solids and Structures · Volume 341 · Article 114336 · 2026</p>
+<div class="pub-links"><a href="https://doi.org/10.1016/j.ijsolstr.2026.114336" target="_blank">DOI / Publisher →</a></div>
+<span class="status">Published</span>
+</div>
+
+<div class="pub">
+<h3>A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain base pairs with applications to characterization of soft materials</h3>
+<p><strong>Tarun Singh, Sandipan Paul</strong> · SSRN · Posted 22 August 2026</p>
+<div class="pub-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7334192" target="_blank">SSRN →</a></div>
+<span class="status">Preprint</span>
+</div>
+
+<div class="pub">
+<h3>Constitutive modeling of viscoelastic solids at large strains based on the theory of evolving natural configurations</h3>
+<p><strong>Tarun Singh, Sandipan Paul</strong> · arXiv preprint · 2025</p>
+<div class="pub-links"><a href="https://arxiv.org/abs/2508.05043" target="_blank">arXiv →</a></div>
+<span class="status">Preprint</span>
+</div>
+</div></section>
+
+<section id="education" style="background:var(--soft)"><div class="wrap">
+<div class="section-head"><div class="kicker">Education</div><h2>Academic journey</h2></div>
+<div class="timeline">
+<div class="item"><div class="year">CURRENT</div><h3>PhD — Civil Engineering</h3><p>Indian Institute of Technology Roorkee · Research in continuum and computational mechanics.</p></div>
+<div class="item"><div class="year">M.TECH</div><h3>M.Tech — Structural Engineering</h3><p>National Institute of Technology Jalandhar.</p></div>
+<div class="item"><div class="year">B.TECH</div><h3>B.Tech — Engineering</h3><p>Rewa Engineering College.</p></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="section-head"><div class="kicker">Tools & skills</div><h2>Computational toolkit</h2></div>
+<div class="grid2">
+<div class="box"><h3>Scientific computing</h3><div class="tags"><span class="tag">MATLAB</span><span class="tag">Python</span><span class="tag">FEniCSx</span><span class="tag">Numerical integration</span><span class="tag">Parameter identification</span></div></div>
+<div class="box"><h3>Finite elements</h3><div class="tags"><span class="tag">Abaqus</span><span class="tag">UMAT</span><span class="tag">Fortran</span><span class="tag">Finite-element implementation</span><span class="tag">Constitutive algorithms</span></div></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div class="section-head"><div class="kicker">Contact</div><h2>Let's connect</h2><p>For research discussions, collaborations, academic opportunities or related questions, feel free to get in touch.</p></div>
+<div class="grid2">
+<div class="box"><h3>Academic profile</h3><p><strong>Tarun Singh</strong><br>PhD Scholar, Civil Engineering<br>IIT Roorkee</p></div>
+<div class="box"><h3>Academic & professional profiles</h3><p>
+<a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank">Google Scholar</a><br>
+<a href="https://orcid.org/0000-0002-6199-8498" target="_blank">ORCID: 0000-0002-6199-8498</a><br>
+<a href="https://www.linkedin.com/in/tarun-singh-733b7a219/" target="_blank">LinkedIn</a><br>
+<a href="https://github.com/Tarunsinghce97" target="_blank">GitHub</a></p></div>
+</div></div></section>
+
+<footer><div class="wrap footerin"><span>© 2026 Tarun Singh</span><span>PhD Scholar · IIT Roorkee</span></div></footer>
+</body></html>
