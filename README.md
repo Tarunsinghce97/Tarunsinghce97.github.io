@@ -1,12 +1,3 @@
-# Tarun Singh — Academic Website
+Upload both `index.html` and `profile.jpg` to the root of your `Tarunsinghce97.github.io` repository. The profile photo is cropped for the circular portrait on the homepage.
 
-GitHub Pages site for Tarun Singh.
-
-Repository: `Tarunsinghce97.github.io`
 Website: https://tarunsinghce97.github.io/
-
-## Publish
-In GitHub: Settings → Pages → Source: Deploy from a branch → Branch: main → Folder: / (root) → Save.
-
-## Update
-Edit `index.html`, commit changes, and GitHub Pages will redeploy automatically.
