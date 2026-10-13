@@ -1,12 +1,11 @@
-# Tarun Singh — Academic Website Update
+# Tarun Singh — Academic Website
 
-Upload `index.html` and `profile.jpg` to the root of your repository.
+This folder contains the GitHub Pages website files. Upload `index.html`, `profile.jpg`, and `cv.pdf` to the root of your repository `Tarunsinghce97.github.io`.
 
-## CV download
-The page links to `cv.pdf`. Add your actual CV PDF with that exact filename to the repository root. The button will work after you upload it.
+## Publication features in this update
+- DOI/publisher links and Google Scholar links for published papers.
+- A direct open-access PDF link for the arXiv preprint.
+- “Cite this paper” expandable citation text with a copy button for each listed work.
+- No publisher PDFs are re-hosted; add a PDF only if you have permission or it is openly licensed.
 
-## Publication PDFs
-Only add PDF copies you are permitted to share. The current publication buttons link to publisher/preprint pages and do not pretend that local PDF files are present.
-
-## Publish
-Open repository → Add file → Upload files → upload `index.html` and `profile.jpg` (and `cv.pdf` if ready) → Commit changes. GitHub Pages will redeploy automatically.
+After uploading, wait a minute or two and refresh https://tarunsinghce97.github.io/.
