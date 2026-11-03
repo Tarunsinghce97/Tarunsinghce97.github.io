@@ -9,3 +9,6 @@ This folder contains the GitHub Pages website files. Upload `index.html`, `profi
 - No publisher PDFs are re-hosted; add a PDF only if you have permission or it is openly licensed.
 
 After uploading, wait a minute or two and refresh https://tarunsinghce97.github.io/.
+
+
+Updated November 2026: Added a Conference Presentations section with IUTAM Symposium 2026 (IIT Delhi), 7th Indian Conference on Applied Mechanics 2026 (IIT Kanpur), and IMPLAST 2025 (IIT Roorkee). Replaced cv.pdf with the updated CV including the JMPS publication and IUTAM presentation.
