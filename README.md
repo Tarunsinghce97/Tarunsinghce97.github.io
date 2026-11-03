@@ -1,14 +1,17 @@
 # Tarun Singh — Academic Website
 
-This folder contains the GitHub Pages website files. Upload `index.html`, `profile.jpg`, and `cv.pdf` to the root of your repository `Tarunsinghce97.github.io`.
+This folder contains the source files for the personal academic website.
 
-## Publication features in this update
-- DOI/publisher links and Google Scholar links for published papers.
-- A direct open-access PDF link for the arXiv preprint.
-- “Cite this paper” expandable citation text with a copy button for each listed work.
-- No publisher PDFs are re-hosted; add a PDF only if you have permission or it is openly licensed.
+## Files
+- `index.html` — website content, styling and interactions
+- `profile.jpg` — profile photograph
+- `cv.pdf` — updated academic CV linked from the website
 
-After uploading, wait a minute or two and refresh https://tarunsinghce97.github.io/.
+## Publish with GitHub Pages
+1. Download and extract this ZIP file.
+2. Open the repository `Tarunsinghce97/Tarunsinghce97.github.io`.
+3. Replace the corresponding files in the repository root with these files.
+4. Commit and push the changes to the `main` branch.
+5. GitHub Pages will publish the update at https://tarunsinghce97.github.io/ (allow a few minutes for deployment).
 
-
-Updated November 2026: Added a Conference Presentations section with IUTAM Symposium 2026 (IIT Delhi), 7th Indian Conference on Applied Mechanics 2026 (IIT Kanpur), and IMPLAST 2025 (IIT Roorkee). Replaced cv.pdf with the updated CV including the JMPS publication and IUTAM presentation.
+The Research section distinguishes published contributions (rheological connections, finite-deformation viscoelasticity, scalar mode-specific formulations and anisotropic equations) from ongoing work (finite-element implementation and viscoplastic extensions). Conference presentations remain separate from journal publications.
