@@ -1,17 +1,20 @@
 # Tarun Singh — Academic Website
 
-This folder contains the source files for the personal academic website.
+This package contains the refined personal academic website.
 
 ## Files
-- `index.html` — website content, styling and interactions
+- `index.html` — responsive single-page academic website
 - `profile.jpg` — profile photograph
-- `cv.pdf` — updated academic CV linked from the website
+- `cv.pdf` — downloadable academic CV
 
 ## Publish with GitHub Pages
-1. Download and extract this ZIP file.
-2. Open the repository `Tarunsinghce97/Tarunsinghce97.github.io`.
-3. Replace the corresponding files in the repository root with these files.
-4. Commit and push the changes to the `main` branch.
-5. GitHub Pages will publish the update at https://tarunsinghce97.github.io/ (allow a few minutes for deployment).
+1. Download and extract this ZIP.
+2. Open the repository: https://github.com/Tarunsinghce97/Tarunsinghce97.github.io
+3. Replace the corresponding files in the repository root (`index.html`, `profile.jpg`, and `cv.pdf`).
+4. Commit the changes to the `main` branch.
+5. Wait for GitHub Pages to rebuild, then check https://tarunsinghce97.github.io/.
 
-The Research section distinguishes published contributions (rheological connections, finite-deformation viscoelasticity, scalar mode-specific formulations and anisotropic equations) from ongoing work (finite-element implementation and viscoplastic extensions). Conference presentations remain separate from journal publications.
+The package is prepared locally; the live GitHub Pages site is not changed until these files are committed to the repository.
+
+## Content notes
+The research section distinguishes published contributions from ongoing directions. Conference presentations remain separate from journal publications. The Non-linear Mechanics Laboratory is linked as the research group; the personal site retains its own identity and content.
