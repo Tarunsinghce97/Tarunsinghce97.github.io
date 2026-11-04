@@ -61,3 +61,7 @@ Two additional photographs from the 7th Indian Conference on Applied Mechanics (
 - `incam-2026-portrait-02.jpeg`
 
 The photos are displayed in the conference gallery and open in the existing lightbox when selected.
+
+
+### Website layout update
+The photo gallery and its navigation link have been removed from this version of the website.
