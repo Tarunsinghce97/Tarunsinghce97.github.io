@@ -1,98 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Tarun Singh — PhD Scholar in Civil Engineering at IIT Roorkee. Research in finite-deformation continuum mechanics, thermodynamically consistent viscoelasticity, rheological connections and computational constitutive modeling.">
-<title>Tarun Singh | IIT Roorkee</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tarun Singh · Finite-deformation viscoelasticity · IIT Roorkee</title>
+<meta name="description" content="Tarun Singh, PhD scholar in Civil Engineering at IIT Roorkee, seeking postdoctoral positions. Constitutive modelling of rate-dependent materials, finite viscoelasticity, evolving natural configurations, and computational implementation. Papers in JMPS, IJSS and IJES.">
+<meta name="author" content="Tarun Singh">
+<meta name="keywords" content="postdoc, constitutive modelling, finite viscoelasticity, continuum mechanics, rheological connections, natural configurations, soft materials, Abaqus UMAT, FEniCSx">
+<link rel="canonical" href="https://tarunsinghce97.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Tarun Singh · Finite-deformation viscoelasticity">
+<meta property="og:description" content="PhD scholar at IIT Roorkee seeking postdoctoral positions in constitutive modelling of rate-dependent materials.">
+<meta property="og:url" content="https://tarunsinghce97.github.io/">
+<meta property="og:image" content="https://tarunsinghce97.github.io/profile.jpg">
+<meta name="theme-color" content="#f5f6f3">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Tarun Singh","jobTitle":"PhD Scholar, Civil Engineering","affiliation":{"@type":"CollegeOrUniversity","name":"Indian Institute of Technology Roorkee"},"url":"https://tarunsinghce97.github.io/","image":"https://tarunsinghce97.github.io/profile.jpg","knowsAbout":["Constitutive modelling","Finite viscoelasticity","Continuum mechanics","Rheological connections","Evolving natural configurations"],"sameAs":["https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en","https://orcid.org/0000-0002-6199-8498","https://www.linkedin.com/in/tarun-singh-733b7a219/","https://github.com/Tarunsinghce97"]}
+</script>
 <style>
-:root{--ink:#172033;--muted:#667085;--blue:#2457a6;--blue2:#163b73;--line:#e5e9f0;--soft:#f5f7fb;--max:1120px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;letter-spacing:-.03em;white-space:nowrap}.brand span{color:var(--blue)}.links{display:flex;gap:21px;font-size:13px;font-weight:700;color:#47536a}.links a:hover{color:var(--blue)}
-.hero{background:linear-gradient(135deg,#f7faff,#fff 55%,#f1f6ff);padding:80px 0 78px;border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:65px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800;color:var(--blue)}
-h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(48px,7vw,78px);line-height:1.02;letter-spacing:-.04em;margin:14px 0 18px}.hero h2{font-size:19px;margin:0 0 18px;color:#344158;font-weight:600}.lead{font-size:17px;color:var(--muted);max-width:700px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:8px;font-weight:700;font-size:13px;border:1px solid var(--line);background:#fff;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px #17203312}.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.btn.light{background:#fff;color:var(--blue);border-color:#cdd8e9}
-.profile-card{background:#fff;border:1px solid var(--line);padding:27px;border-radius:16px;box-shadow:0 16px 45px rgba(27,50,90,.08)}.portrait{height:165px;width:165px;border-radius:50%;object-fit:cover;object-position:center 28%;display:block;margin:0 auto 22px;border:3px solid #eef3fb}.cardline{border-top:1px solid var(--line);padding-top:15px;margin-top:15px;font-size:13px;color:var(--muted)}.cardline strong{display:block;color:var(--ink)}
-section{padding:76px 0}.section-head{margin-bottom:32px}.kicker{color:var(--blue);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.15em}.section-head h2{font-family:"Playfair Display",Georgia,serif;font-size:40px;line-height:1.15;margin:8px 0}.section-head p{color:var(--muted);max-width:780px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.box{border:1px solid var(--line);border-radius:14px;padding:25px;background:#fff}.box h3{margin-top:0}.tags{display:flex;flex-wrap:wrap;gap:9px}.tag{padding:7px 11px;border-radius:999px;background:var(--soft);color:#3c4d67;font-size:12px;font-weight:600}
-.research{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.research article{padding:23px;border:1px solid var(--line);border-radius:14px;background:#fff}.num{color:var(--blue);font-weight:800;font-size:13px}.research h3{margin:8px 0}.research p{color:var(--muted);font-size:14px}
-.pub{border-top:1px solid var(--line);padding:25px 0}.pub:first-of-type{border-top:0}.pub h3{font-size:17px;line-height:1.5;margin:0 0 7px}.pub p{margin:0;color:var(--muted);font-size:13px}.pub-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.pub-links a{font-size:12px;font-weight:800;color:var(--blue);border:1px solid #dbe5f4;border-radius:6px;padding:6px 9px}.pub-links a:hover{background:#eef4ff}.cite-toggle{font:inherit;font-size:12px;font-weight:800;color:var(--blue);border:1px solid #dbe5f4;border-radius:6px;padding:6px 9px;background:#fff;cursor:pointer}.cite-toggle:hover{background:#eef4ff}.citation-box{display:none;margin-top:12px;padding:14px;background:var(--soft);border:1px solid var(--line);border-radius:8px}.citation-box.open{display:block}.citation-box p{font-size:12px;overflow-wrap:anywhere;color:var(--ink);margin:0 0 10px}.citation-box button{font-size:12px;font-weight:800;padding:6px 9px;border:1px solid #cdd8e9;border-radius:6px;background:#fff;color:var(--blue);cursor:pointer}.status{display:inline-block;margin-top:11px;font-size:11px;font-weight:800;padding:4px 8px;border-radius:6px;background:#eef4ff;color:var(--blue)}
-.news-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.news{padding:22px;border:1px solid var(--line);border-radius:13px}.news time{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}.news h3{font-size:16px;line-height:1.4;margin:8px 0}.news p{font-size:13px;color:var(--muted);margin-bottom:0}
-.timeline{border-left:2px solid #dbe3ef;margin-left:8px;padding-left:26px}.item{position:relative;margin-bottom:30px}.item:before{content:"";position:absolute;width:10px;height:10px;background:var(--blue);border-radius:50%;left:-32px;top:8px}.year{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.08em}.item h3{margin:4px 0}.item p{margin:0;color:var(--muted)}
-.contact{background:var(--ink);color:#fff}.contact .section-head p{color:#b9c2d1}.contact .box{background:#202a3c;border-color:#344057}.contact .box p{color:#c5cedd}.contact a{color:#fff;text-decoration:underline;text-decoration-color:#6d92cc}
-footer{background:#111827;color:#9ca7b8;padding:24px 0;font-size:12px}.footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:800px){.navin{align-items:flex-start;flex-direction:column;padding-top:14px;padding-bottom:12px}.links{display:flex;overflow-x:auto;max-width:100%;gap:18px;padding-bottom:4px}.links a{white-space:nowrap}.hero-grid,.grid2,.research,.news-list{grid-template-columns:1fr}.hero{padding:55px 0}.hero-grid{gap:35px}section{padding:58px 0}.section-head h2{font-size:34px}.profile-card{max-width:430px}}
+:root{
+  --paper:#f5f6f3; --panel:#ffffff; --ink:#14242b; --muted:#56656b; --rule:#d9dfdc;
+  --accent:#1c6a73; --accent-ink:#0f4c54; --accent-soft:#e3eff0; --open:#2d6a3e; --open-soft:#e4f0e6;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif; --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 12px;font-family:var(--sans);font-size:14px;z-index:50}
+.skip:focus{left:8px}
 
-.research-journey{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:28px 0 42px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
-.journey-step{padding:20px 22px;position:relative}
-.journey-step+.journey-step{border-left:1px solid var(--line)}
-.journey-step .step-no{font-size:11px;letter-spacing:.12em;font-weight:800;color:var(--blue)}
-.journey-step h3{font-size:16px;margin:7px 0 5px}
-.journey-step p{font-size:13px;color:var(--muted);margin:0}
-.research article{position:relative;display:flex;flex-direction:column;min-height:225px}
-.research article .research-ref{margin-top:auto;padding-top:14px;font-size:12px;font-weight:800;color:var(--blue)}
-.lab-link{display:inline-flex;align-items:center;gap:7px;margin-top:15px;font-size:12px;font-weight:800;color:var(--blue);text-decoration:underline;text-decoration-color:#b8c9e2;text-underline-offset:3px}
-@media(max-width:800px){.research-journey{grid-template-columns:1fr}.journey-step+.journey-step{border-left:0;border-top:1px solid var(--line)}}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);max-width:1180px;margin:0 auto}
+/* sidebar */
+.side{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:40px 32px 32px 28px;border-right:1px solid var(--rule);font-family:var(--sans);font-size:14px}
+.portrait{width:132px;height:132px;border-radius:50%;object-fit:cover;object-position:center 30%;display:block;border:1px solid var(--rule)}
+.side h1{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.15;margin:18px 0 4px;letter-spacing:-.01em}
+.side .role{margin:0;color:var(--muted);line-height:1.45}
+.open{display:inline-block;margin:16px 0 0;padding:6px 10px;background:var(--open-soft);color:var(--open);border-radius:4px;font-weight:600;font-size:13px;line-height:1.35}
+nav.toc{margin:26px 0 0}
+nav.toc a{display:block;padding:6px 0 6px 12px;margin-left:-12px;border-left:2px solid transparent;color:var(--muted);text-decoration:none;font-weight:500}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--ink);border-left-color:var(--accent);font-weight:600}
+.side-links{margin:22px 0 0;padding:18px 0 0;border-top:1px solid var(--rule);display:grid;gap:7px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:5px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14px;margin-top:18px;width:100%}
+.btn:hover{background:var(--accent-ink);color:#fff}
 
+/* main */
+main{padding:56px 48px 40px;min-width:0}
+section{padding:0 0 56px}
+section+section{padding-top:44px;border-top:1px solid var(--rule)}
+h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.2;margin:0 0 20px;letter-spacing:-.01em}
+h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.35;margin:0 0 6px}
+p{margin:0 0 14px;max-width:68ch}
+.meta{font-family:var(--sans);font-size:13.5px;color:var(--muted)}
 
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:40px;align-items:start}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;max-width:16ch}
+.hero .lede{font-size:20px;line-height:1.55;color:#24363d}
+figure.defo{margin:0}
+figure.defo svg{width:100%;height:auto;display:block}
+figure.defo figcaption{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.45;margin-top:8px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin:30px 0 0;border:1px solid var(--rule);background:var(--panel);font-family:var(--sans)}
+.facts div{padding:14px 16px;border-right:1px solid var(--rule)}
+.facts div:last-child{border-right:0}
+.facts dt{font-size:12px;color:var(--muted);margin:0 0 3px}
+.facts dd{margin:0;font-size:15px;font-weight:600;line-height:1.35}
+.looking{margin-top:30px;padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--open)}
+.looking h3{margin-bottom:8px}
+.looking ul{margin:0;padding-left:20px}
+.looking li{margin:4px 0;max-width:66ch}
 
+/* recent */
+.recent{list-style:none;margin:0;padding:0}
+.recent li{display:grid;grid-template-columns:84px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:17px}
+.recent li:last-child{border-bottom:0}
+.recent time{font-family:var(--sans);font-size:13px;color:var(--muted);padding-top:3px}
+
+/* research */
+.theme{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--rule)}
+.theme:first-of-type{border-top:0;padding-top:0}
+.theme .ref{font-family:var(--sans);font-size:13px;color:var(--muted);padding-top:5px}
+.theme .ref a{font-weight:600}
+.theme p{margin:0}
+.sub{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--muted);margin:32px 0 6px}
+
+/* publications */
+.pub{padding:20px 0;border-top:1px solid var(--rule)}
+.pub:first-of-type{border-top:0;padding-top:4px}
+.pub h3{font-size:19px;font-weight:600;max-width:72ch}
+.pub .by{margin:0 0 2px;font-size:16.5px}
+.pub .venue{margin:0;font-size:16.5px;color:var(--muted);max-width:none}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-family:var(--sans)}
+.actions a,.actions button{font:600 13px/1 var(--sans);padding:8px 11px;border:1px solid var(--rule);border-radius:4px;background:var(--panel);color:var(--accent-ink);text-decoration:none;cursor:pointer}
+.actions a:hover,.actions button:hover{background:var(--accent-soft);border-color:#b9d3d6}
+.tag{display:inline-block;font-family:var(--sans);font-size:12px;font-weight:600;padding:3px 8px;border-radius:3px;background:var(--accent-soft);color:var(--accent-ink);margin-left:8px;vertical-align:2px}
+.plain{list-style:none;margin:0;padding:0}
+.plain li{padding:12px 0;border-top:1px solid var(--rule);font-size:16.5px;max-width:78ch}
+.plain li:first-child{border-top:0}
+.plain em{font-style:italic}
+
+/* timeline-ish */
+.edu{display:grid;grid-template-columns:120px 1fr;gap:6px 20px;padding:14px 0;border-top:1px solid var(--rule)}
+.edu:first-of-type{border-top:0;padding-top:0}
+.edu .yr{font-family:var(--sans);font-size:13.5px;color:var(--muted);padding-top:4px}
+.edu p{margin:0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.skills h3{font-size:17px}
+.skills p{font-size:16.5px;margin:0}
+
+.contact-list{font-family:var(--sans);font-size:15px;display:grid;gap:8px;margin:18px 0 0}
+.contact-list span{display:inline-block;min-width:96px;color:var(--muted)}
+footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);margin:0 48px}
+
+@media (max-width:960px){
+  .layout{display:block}
+  .side{position:static;height:auto;overflow:visible;border-right:0;border-bottom:1px solid var(--rule);padding:28px 22px 18px;display:grid;grid-template-columns:96px 1fr;gap:0 18px}
+  .side .portrait{width:96px;height:96px;grid-row:1/3}
+  .side h1{margin:4px 0 2px;font-size:25px}
+  .side .intro{grid-column:2}
+  .side .open{grid-column:1/-1}
+  nav.toc{grid-column:1/-1;display:flex;gap:4px 16px;overflow-x:auto;margin:16px 0 0;padding-bottom:4px}
+  nav.toc a{border-left:0;padding:6px 0;margin:0;white-space:nowrap;border-bottom:2px solid transparent}
+  nav.toc a.on{border-bottom-color:var(--accent)}
+  .side-links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;padding-top:12px}
+  .btn{grid-column:1/-1;width:auto;justify-self:start;margin-top:14px}
+  main{padding:36px 22px 20px}
+  footer{margin:0 22px;padding:22px 0 36px}
+  .hero{grid-template-columns:1fr}
+  figure.defo{max-width:280px}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .theme,.edu{grid-template-columns:1fr}
+  .recent li{grid-template-columns:1fr;gap:0}
+  .facts div{border-right:0;border-bottom:1px solid var(--rule)}
+  .facts div:last-child{border-bottom:0}
+}
+@media print{.side nav,.btn,.actions,.skip{display:none}.layout{display:block}.side{position:static;height:auto;border:0}body{background:#fff}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<nav><div class="wrap navin"><a class="brand" href="#home">Tarun <span>Singh</span></a><div class="links"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#presentations">Presentations</a><a href="#news">News</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
-<header class="hero" id="home"><div class="wrap hero-grid"><div><div class="eyebrow">PhD Scholar · IIT Roorkee</div><h1>Tarun Singh</h1><h2>Finite Deformation · Constitutive Mechanics · Viscoelasticity</h2><p class="lead">My research develops thermodynamically consistent constitutive frameworks for materials undergoing finite deformations. It connects rheological models and evolving natural configurations with deformation-mode-specific formulations, material characterization and computational implementation.</p><div class="buttons"><a class="btn primary" href="#research">Explore my research</a><a class="btn" href="#publications">View publications</a><a class="btn light" href="cv.pdf" download>Download CV ↓</a></div></div>
-<aside class="profile-card"><img class="portrait" src="profile.jpg" alt="Portrait of Tarun Singh"><strong>PhD Scholar</strong><div class="cardline"><strong>Department of Civil Engineering</strong>Indian Institute of Technology Roorkee</div><div class="cardline"><strong>Research focus</strong>Finite deformation & constitutive mechanics</div><div class="cardline"><strong>Research group</strong><a href="https://www.nlmlab-iitr.in/" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:underline">Non-linear Mechanics Laboratory ↗</a></div></aside></div></header>
-<section id="about"><div class="wrap"><div class="section-head"><div class="kicker">About</div><h2>Researching how materials deform.</h2><p>My research focuses on constitutive modelling of rate-dependent materials undergoing finite deformation. It has progressed from formulating finite-deformation rheological connections, to developing thermodynamically consistent viscoelastic models, and then to deriving, deformation-mode-specific constitutive equations for material characterization. Current directions include finite-element implementation and extensions to viscoplasticity.</p></div><div class="grid2"><div class="box"><h3>Current position</h3><p><strong>PhD Scholar</strong><br>Department of Civil Engineering<br>Indian Institute of Technology Roorkee</p><p>Supervisor: <strong>Dr. Sandipan Paul</strong></p></div><div class="box"><h3>Research interests</h3><div class="tags"><span class="tag">Finite deformation</span><span class="tag">Continuum mechanics</span><span class="tag">Viscoelasticity</span><span class="tag">Viscoplasticity</span><span class="tag">Constitutive modeling</span><span class="tag">Evolving natural configurations</span><span class="tag">Computational mechanics</span><span class="tag">Rheology</span></div></div></div></div></section>
-<section id="research" style="background:var(--soft)"><div class="wrap">
-<div class="section-head"><div class="kicker">Research programme</div><h2>Constitutive mechanics at finite deformation</h2>
-<p>My research is concerned with the formulation, analysis and computational implementation of constitutive models for rate-dependent materials undergoing finite deformations. The work connects continuum mechanics, rheological modelling, thermodynamics and material characterization.</p></div>
-<div class="research-journey" aria-label="Research progression">
-  <div class="journey-step"><div class="step-no">01 · FRAMEWORK</div><h3>Rheological connections</h3><p>How to represent series and parallel connections at finite deformation.</p></div>
-  <div class="journey-step"><div class="step-no">02 · CONSTITUTIVE MODELS</div><h3>Finite viscoelasticity</h3><p>Thermodynamically consistent models using evolving natural configurations.</p></div>
-  <div class="journey-step"><div class="step-no">03 · CHARACTERIZATION</div><h3>Mode-specific equations</h3><p>Scalar conjugate pairs and analytical solutions for selected deformation modes.</p></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+
+<aside class="side">
+  <img class="portrait" src="profile.jpg" alt="Portrait of Tarun Singh" width="132" height="132">
+  <div class="intro">
+    <h1>Tarun Singh</h1>
+    <p class="role">PhD scholar, Department of Civil Engineering<br>Indian Institute of Technology Roorkee</p>
+  </div>
+  <p class="open">Open to postdoctoral positions</p>
+  <nav class="toc" aria-label="Sections">
+    <a href="#summary">Summary</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
+    <a href="#background">Education &amp; skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="btn" href="cv.pdf" download>Download CV (PDF)</a>
+  <div class="side-links">
+    <a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://orcid.org/0000-0002-6199-8498" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://www.linkedin.com/in/tarun-singh-733b7a219/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Tarunsinghce97" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.nlmlab-iitr.in/" target="_blank" rel="noopener">Non-linear Mechanics Laboratory</a>
+  </div>
+</aside>
+
+<div>
+<main id="main">
+
+<section id="summary">
+  <div class="hero">
+    <div>
+      <h1>How rate-dependent materials deform, from theory to simulation.</h1>
+      <p class="lede">I build thermodynamically consistent constitutive models for viscoelastic solids at finite deformation. My work links rheological connections, evolving natural configurations and deformation-mode-specific equations, and carries them into parameter identification and finite-element code.</p>
+    </div>
+    <figure class="defo">
+      <svg id="grid" viewBox="0 0 250 250" role="img" aria-label="A square reference grid and the same grid after a finite stretch and shear"></svg>
+      <figcaption>A reference grid and its image under a finite deformation, the setting of all the work below.</figcaption>
+    </figure>
+  </div>
+
+  <dl class="facts">
+    <div><dt>Position</dt><dd>PhD scholar, 2023 to present</dd></div>
+    <div><dt>Supervisor</dt><dd>Dr. Sandipan Paul</dd></div>
+    <div><dt>Journal papers</dt><dd>3 on finite viscoelasticity (JMPS, IJSS, IJES)</dd></div>
+    <div><dt>Group</dt><dd>Non-linear Mechanics Laboratory</dd></div>
+  </dl>
+
+  <div class="looking">
+    <h3>What I am looking for</h3>
+    <ul>
+      <li>A postdoctoral position in constitutive modelling of rate-dependent materials, including viscoelasticity and viscoplasticity at finite deformation.</li>
+      <li>Groups working on soft-material characterization, nonlinear continuum mechanics, or computational implementation of constitutive models.</li>
+      <li>What I bring: continuum-mechanics theory, thermodynamic consistency, analytical solutions for loading modes, and implementation in Abaqus (UMAT) and FEniCSx.</li>
+    </ul>
+  </div>
+
+  <h3 style="margin-top:34px">Recent</h3>
+  <ul class="recent">
+    <li><time>2026</time><span>Paper on a deformation mode-specific framework for finite viscoelasticity published in <em>Journal of the Mechanics and Physics of Solids</em>.</span></li>
+    <li><time>2026</time><span>Paper on Kelvin–Voigt type solids using evolving natural configurations published in <em>International Journal of Solids and Structures</em>.</span></li>
+    <li><time>Jul 2026</time><span>Presented at the 7th Indian Conference on Applied Mechanics (INCAM), IIT Kanpur.</span></li>
+    <li><time>2026</time><span>Presented at the IUTAM Symposium on rate dependent mechanics, IIT Delhi.</span></li>
+  </ul>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <p>My doctoral work asks how to formulate viscoelastic constitutive models that remain valid at large strain and respect thermodynamics. It moves from the structure of rheological networks, to specific models, to equations that can be used to characterize real materials.</p>
+
+  <div class="theme">
+    <div class="ref">Published<br><a href="https://doi.org/10.1016/j.ijengsci.2025.104267" target="_blank" rel="noopener">IJES 2025</a></div>
+    <div><h3>Rheological connections at finite deformation</h3><p>I extended series and parallel rheological connections to finite deformation using multiple natural configurations. The connections are characterized through the distribution of stress power, which gives a route to building rheological networks beyond the small-strain setting.</p></div>
+  </div>
+  <div class="theme">
+    <div class="ref">Published<br><a href="https://doi.org/10.1016/j.ijsolstr.2026.114336" target="_blank" rel="noopener">IJSS 2026</a></div>
+    <div><h3>Thermodynamically consistent finite viscoelasticity</h3><p>Finite-deformation viscoelastic models within the theory of evolving natural configurations, covering Maxwell, Zener, Poynting–Thomson and Kelvin–Voigt type behaviour. Particular attention goes to the driving (configurational) force associated with parallel rheological structures. The same formulation gives constitutive equations for anisotropic response.</p></div>
+  </div>
+  <div class="theme">
+    <div class="ref">Published<br><a href="https://doi.org/10.1016/j.jmps.2026.106895" target="_blank" rel="noopener">JMPS 2026</a></div>
+    <div><h3>Scalar conjugate pairs and material characterization</h3><p>A deformation mode-specific framework built on scalar, conjugate stress–strain pairs. A QR-based decomposition of the kinematics yields scalar governing equations for selected loading modes. These support analytical solutions and physically meaningful parameter identification for soft materials.</p></div>
+  </div>
+
+  <div class="sub">Ongoing</div>
+  <div class="theme">
+    <div class="ref">In progress</div>
+    <div><h3>Finite-element implementation</h3><p>Implementing the constitutive models as Abaqus user materials (UMAT) and in FEniCSx, to solve boundary-value problems and large-deformation simulations.</p></div>
+  </div>
+  <div class="theme">
+    <div class="ref">In progress</div>
+    <div><h3>Extension to viscoplasticity</h3><p>Extending the modelling framework to viscoplastic behaviour under finite deformation.</p></div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="meta" style="margin-top:-8px">Full list on <a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>. First-author journal papers are listed first.</p>
+
+  <article class="pub">
+    <h3>A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain pairs: Applications to characterization of soft materials</h3>
+    <p class="by"><strong>T. Singh</strong> and S. Paul</p>
+    <p class="venue"><em>Journal of the Mechanics and Physics of Solids</em>, Article 106895, 2026 <span class="tag">Published</span></p>
+    <div class="actions">
+      <a href="https://doi.org/10.1016/j.jmps.2026.106895" target="_blank" rel="noopener">DOI</a>
+      <button type="button" class="copy" data-cite="Singh, T., &amp; Paul, S. (2026). A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain pairs: Applications to characterization of soft materials. Journal of the Mechanics and Physics of Solids, 106895. https://doi.org/10.1016/j.jmps.2026.106895">Copy citation</button>
+    </div>
+  </article>
+  <article class="pub">
+    <h3>Constitutive modeling of Kelvin–Voigt type viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations</h3>
+    <p class="by"><strong>T. Singh</strong> and S. Paul</p>
+    <p class="venue"><em>International Journal of Solids and Structures</em>, 341, Article 114336, 2026 <span class="tag">Published</span></p>
+    <div class="actions">
+      <a href="https://doi.org/10.1016/j.ijsolstr.2026.114336" target="_blank" rel="noopener">DOI</a>
+      <button type="button" class="copy" data-cite="Singh, T., &amp; Paul, S. (2026). Constitutive modeling of Kelvin–Voigt type viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations. International Journal of Solids and Structures, 341, 114336. https://doi.org/10.1016/j.ijsolstr.2026.114336">Copy citation</button>
+    </div>
+  </article>
+  <article class="pub">
+    <h3>On the extension of the concept of rheological connections to a finite deformation framework using multiple natural configurations</h3>
+    <p class="by"><strong>T. Singh</strong> and S. Paul</p>
+    <p class="venue"><em>International Journal of Engineering Science</em>, 212, Article 104267, 2025 <span class="tag">Published</span></p>
+    <div class="actions">
+      <a href="https://doi.org/10.1016/j.ijengsci.2025.104267" target="_blank" rel="noopener">DOI</a>
+      <button type="button" class="copy" data-cite="Singh, T., &amp; Paul, S. (2025). On the extension of the concept of rheological connections to a finite deformation framework using multiple natural configurations. International Journal of Engineering Science, 212, 104267. https://doi.org/10.1016/j.ijengsci.2025.104267">Copy citation</button>
+    </div>
+  </article>
+
+  <div class="sub">Earlier work: durability of concrete (M.Tech, 2022)</div>
+  <ul class="plain">
+    <li>N. Singh, A. Singh, N. Ankur, P. Kumar, M. Kumar, and <strong>T. Singh</strong> (2022). Reviewing the properties of recycled concrete aggregates and iron slag in concrete. <em>Journal of Building Engineering</em>, 60, 105150.</li>
+    <li>N. Singh, N. Ankur, <strong>T. Singh</strong>, M. Kumar, A. Singh, and P. Kumar (2022). Non-destructive evaluation of iron slag concrete containing recycled concrete aggregates. <em>Indian Concrete Journal</em>, 96(11).</li>
+    <li>N. Singh, <strong>T. Singh</strong>, M. Kumar, A. Singh, and P. Kumar (2022). Investigating the fresh state performance of concrete containing iron slag and recycled concrete aggregates. <em>Materials Today: Proceedings</em>, 65, 1467–1477.</li>
+  </ul>
+</section>
+
+<section id="talks">
+  <h2>Conference presentations</h2>
+  <ul class="plain">
+    <li><strong>T. Singh</strong> and S. Paul (2026). Constitutive modeling of viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations. <em>IUTAM Symposium: Rate Dependent Mechanics and Multiscale Modelling of Materials</em>, IIT Delhi.</li>
+    <li><strong>T. Singh</strong> and S. Paul (2026). Thermodynamically consistent constitutive model for viscoelastic solids under finite deformation using evolving natural configurations. <em>7th Indian Conference on Applied Mechanics (INCAM)</em>, IIT Kanpur.</li>
+    <li><strong>T. Singh</strong> and S. Paul (2025). Challenges in extending rheological connections to a finite deformation theory. <em>14th International Symposium on Plasticity and Impact Mechanics (IMPLAST 2025)</em>, IIT Roorkee.</li>
+  </ul>
+</section>
+
+<section id="background">
+  <h2>Education</h2>
+  <div class="edu"><div class="yr">2023 to present</div><div><h3>PhD, Civil Engineering</h3><p>Indian Institute of Technology Roorkee. Constitutive modelling of rate-dependent materials. Supervisor: Dr. Sandipan Paul.</p></div></div>
+  <div class="edu"><div class="yr">2020 to 2022</div><div><h3>M.Tech., Structural Engineering</h3><p>Dr. B. R. Ambedkar National Institute of Technology Jalandhar. Thesis: carbonation resistance of concrete made with iron slag and recycled concrete aggregate.</p></div></div>
+  <div class="edu"><div class="yr">2015 to 2019</div><div><h3>B.Tech., Civil Engineering</h3><p>Rewa Engineering College, Rewa, Madhya Pradesh.</p></div></div>
+
+  <h2 style="margin-top:44px">Skills</h2>
+  <div class="skills">
+    <div><h3>Scientific computing</h3><p>MATLAB</p></div>
+    <div><h3>Finite-element and constitutive implementation</h3><p>Abaqus, UMAT, Fortran, FEniCSx</p></div>
+    <div><h3>Numerical methods</h3><p>Numerical integration of constitutive equations, parameter identification, model calibration</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I am happy to hear from principal investigators and research groups about postdoctoral openings, collaborations or questions about this work. My CV has the full details.</p>
+  <div class="contact-list">
+    <div id="emailRow" hidden><span>Email</span><a id="emailLink" href="#"></a></div>
+    <div><span>Affiliation</span>Department of Civil Engineering, IIT Roorkee</div>
+    <div><span>CV</span><a href="cv.pdf" download>cv.pdf</a></div>
+    <div><span>Profiles</span><a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://orcid.org/0000-0002-6199-8498" target="_blank" rel="noopener">ORCID</a>, <a href="https://www.linkedin.com/in/tarun-singh-733b7a219/" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+</section>
+
+</main>
+<footer>© 2026 Tarun Singh. Last updated November 2026.</footer>
 </div>
-<div class="research">
-<article><div class="num">RESEARCH THEME 01</div><h3>Rheological connections at finite deformation</h3>
-<p>Extended series and parallel rheological connections to finite-deformation mechanics using multiple natural configurations. The framework characterizes the connections through stress-power distribution, providing a strategy for formulating rheological networks beyond the conventional small-strain setting.</p><div class="research-ref">Related work · IJES (2025)</div></article>
-<article><div class="num">RESEARCH THEME 02</div><h3>Thermodynamically consistent finite viscoelasticity</h3>
-<p>Developed finite-deformation viscoelastic constitutive models within the theory of evolving natural configurations. The work treats Maxwell, Zener, Poynting–Thomson and Kelvin–Voigt-type models, with particular attention to the driving/configurational force associated with parallel rheological structures.</p><div class="research-ref">Related work · IJSS (2026)</div></article>
-<article><div class="num">RESEARCH THEME 03</div><h3>QR kinematics and scalar constitutive formulation</h3>
-<p>Introduced a deformation-mode-specific framework based on scalar, conjugate stress–strain pairs. A QR-based decomposition is used to obtain scalar governing equations for selected loading modes, supporting analytical solutions and physically meaningful parameter identification.</p><div class="research-ref">Related work · JMPS (2026)</div></article>
-<article><div class="num">RESEARCH THEME 04</div><h3>Anisotropic viscoelastic constitutive modelling</h3>
-<p>Derived constitutive equations for anisotropic material responses as part of the finite-deformation viscoelasticity work, extending the formulation beyond isotropic material behaviour.</p><div class="research-ref">Published formulation · IJSS (2026)</div></article>
 </div>
-<div class="section-head" style="margin:42px 0 18px"><div class="kicker">Ongoing directions</div><h2 style="font-size:28px">From constitutive theory to computation</h2>
-<p>Current work focuses on translating constitutive developments into computational tools and extending the modelling framework to additional rate-dependent material behaviour.</p></div>
-<div class="research">
-<article><div class="num">ONGOING · COMPUTATIONAL MECHANICS</div><h3>Finite-element implementation</h3><p>Implementing constitutive models in Abaqus user material subroutines (UMAT/VUMAT) and FEniCSx, with the aim of solving boundary-value problems and large-deformation simulations.</p></article>
-<article><div class="num">ONGOING · MATERIAL MODELLING</div><h3>Extension to viscoplasticity</h3><p>Extending the constitutive modelling framework to describe viscoplastic material behaviour under finite deformation.</p></article>
-</div>
-<a class="lab-link" href="https://www.nlmlab-iitr.in/" target="_blank" rel="noopener">Research group · Non-linear Mechanics Laboratory, IIT Roorkee ↗</a>
-</div></section>
-<section id="publications"><div class="wrap"><div class="section-head"><div class="kicker">Publications</div><h2>Selected publications</h2><p> </p></div>
-<div class="pub"><h3>On the extension of the concept of rheological connections to a finite deformation framework using multiple natural configurations</h3><p><strong>Tarun Singh, Sandipan Paul</strong> · <em>International Journal of Engineering Science</em> · Volume 212 · Article 104267 · 2025</p><div class="pub-links"><a href="https://doi.org/10.1016/j.ijengsci.2025.104267" target="_blank" rel="noopener">DOI / publisher ↗</a><a href="https://scholar.google.com/scholar?q=On+the+extension+of+the+concept+of+rheological+connections+to+a+finite+deformation+framework+using+multiple+natural+configurations" target="_blank" rel="noopener">Google Scholar ↗</a><button class="cite-toggle" type="button" aria-expanded="false">Cite this paper</button></div><div class="citation-box"><p>Singh, T., &amp; Paul, S. (2025). On the extension of the concept of rheological connections to a finite deformation framework using multiple natural configurations. <em>International Journal of Engineering Science, 212</em>, 104267. https://doi.org/10.1016/j.ijengsci.2025.104267</p><button type="button" class="copy-citation">Copy citation</button></div><span class="status">Published</span></div>
-<div class="pub"><h3>Constitutive modeling of Kelvin–Voigt type viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations</h3><p><strong>Tarun Singh, Sandipan Paul</strong> · <em>International Journal of Solids and Structures</em> · Volume 341 · Article 114336 · 2026</p><div class="pub-links"><a href="https://doi.org/10.1016/j.ijsolstr.2026.114336" target="_blank" rel="noopener">DOI / publisher ↗</a><a href="https://scholar.google.com/scholar?q=Constitutive+modeling+of+Kelvin-Voigt+type+viscoelastic+solids+undergoing+finite+deformations" target="_blank" rel="noopener">Google Scholar ↗</a><button class="cite-toggle" type="button" aria-expanded="false">Cite this paper</button></div><div class="citation-box"><p>Singh, T., &amp; Paul, S. (2026). Constitutive modeling of Kelvin–Voigt type viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations. <em>International Journal of Solids and Structures, 341</em>, 114336. https://doi.org/10.1016/j.ijsolstr.2026.114336</p><button type="button" class="copy-citation">Copy citation</button></div><span class="status">Published</span></div>
-<div class="pub"><h3>A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain pairs: Applications to characterization of soft materials</h3><p><strong>Tarun Singh, Sandipan Paul</strong> · <em>Journal of the Mechanics and Physics of Solids</em> · Article 106895 · 2026</p><div class="pub-links"><a href="https://doi.org/10.1016/j.jmps.2026.106895" target="_blank" rel="noopener">DOI / publisher ↗</a><a href="https://scholar.google.com/scholar?q=A+deformation+mode-specific+constitutive+framework+for+finite+viscoelasticity" target="_blank" rel="noopener">Google Scholar ↗</a><button class="cite-toggle" type="button" aria-expanded="false">Cite this paper</button></div><div class="citation-box"><p>Singh, T., &amp; Paul, S. (2026). A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain pairs: Applications to characterization of soft materials. <em>Journal of the Mechanics and Physics of Solids</em>, 106895. https://doi.org/10.1016/j.jmps.2026.106895</p><button type="button" class="copy-citation">Copy citation</button></div><span class="status">Published</span></div>
-</div></section>
-<section id="presentations" style="background:var(--soft)"><div class="wrap"><div class="section-head"><div class="kicker">Academic activities</div><h2>Conference presentations</h2><p> </p></div>
-<div class="pub"><h3>Constitutive modeling of viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations</h3><p><strong>Tarun Singh, Sandipan Paul</strong> · <em>IUTAM Symposium: Rate Dependent Mechanics and Multiscale Modelling of Materials</em> · IIT Delhi · 2026</p><span class="status">Oral / conference presentation</span></div>
-<div class="pub"><h3>Thermodynamically consistent constitutive model for viscoelastic solids under finite deformation using evolving natural configurations</h3><p><strong>Tarun Singh, Sandipan Paul</strong> · <em>7th Indian Conference on Applied Mechanics</em> · IIT Kanpur · 2026</p><span class="status">Conference presentation</span></div>
-<div class="pub"><h3>Challenges in extending rheological connections to a finite deformation theory</h3><p><strong>Tarun Singh, Sandipan Paul</strong> · <em>14th International Symposium on Plasticity and Impact Mechanics (IMPLAST 2025)</em> · IIT Roorkee · 2025</p><span class="status">Conference presentation</span></div>
-</div></section>
-<section id="news" style="background:var(--soft)"><div class="wrap"><div class="section-head"><div class="kicker">News & updates</div><h2>Research milestones</h2><p> </p></div><div class="news-list">
-<article class="news"><time>2026 · Publication</time><h3>New paper in IJSS</h3><p>Work on Kelvin–Voigt type viscoelastic solids undergoing finite deformations using evolving natural configurations appeared in the International Journal of Solids and Structures.</p></article>
-<article class="news"><time>2026 · Publication</time><h3>New paper in JMPS</h3><p>Our work on a deformation mode-specific constitutive framework for finite viscoelasticity has been published in the Journal of the Mechanics and Physics of Solids.</p></article>
-<article class="news"><time>2025 · Publication</time><h3>Rheological connections at finite deformation</h3><p>Research extending rheological connections to a finite-deformation framework with multiple natural configurations was published in the International Journal of Engineering Science.</p></article>
-</div></div></section>
-<section id="education"><div class="wrap"><div class="section-head"><div class="kicker">Education</div><h2>Academic journey</h2></div><div class="timeline"><div class="item"><div class="year">CURRENT</div><h3>PhD — Civil Engineering</h3><p>Indian Institute of Technology Roorkee · Research in continuum and computational mechanics.</p></div><div class="item"><div class="year">M.TECH</div><h3>M.Tech — Structural and construction Engineering</h3><p>National Institute of Technology Jalandhar.</p></div><div class="item"><div class="year">B.TECH</div><h3>B.Tech — Civil Engineering</h3><p>Rewa Engineering College.</p></div></div></div></section>
-<section id="skills"><div class="wrap"><div class="section-head"><div class="kicker">Tools & skills</div><h2>Computational toolkit</h2></div><div class="grid2"><div class="box"><h3>Scientific computing</h3><div class="tags"><span class="tag">MATLAB</span><span class="tag">Python</span><span class="tag">FEniCSx</span><span class="tag">Numerical integration</span><span class="tag">Parameter identification</span></div></div><div class="box"><h3>Finite elements</h3><div class="tags"><span class="tag">Abaqus</span><span class="tag">UMAT</span><span class="tag">Fortran</span><span class="tag">Finite-element implementation</span><span class="tag">Constitutive algorithms</span></div></div></div></div></section>
-<section id="contact" class="contact"><div class="wrap"><div class="section-head"><div class="kicker">Contact</div><h2>Let's connect</h2><p>For research discussions, collaborations, academic opportunities or related questions, feel free to get in touch.</p></div><div class="grid2"><div class="box"><h3>Academic profile</h3><p><strong>Tarun Singh</strong><br>PhD Scholar, Civil Engineering<br>IIT Roorkee</p><p><a href="cv.pdf" download>Download CV (PDF) ↓</a></p></div><div class="box"><h3>Academic & professional profiles</h3><p><a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a><br><a href="https://orcid.org/0000-0002-6199-8498" target="_blank" rel="noopener">ORCID: 0000-0002-6199-8498</a><br><a href="https://www.linkedin.com/in/tarun-singh-733b7a219/" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://github.com/Tarunsinghce97" target="_blank" rel="noopener">GitHub</a></p></div></div></div></section>
-<footer><div class="wrap footerin"><span>© 2026 Tarun Singh</span><span>PhD Scholar · IIT Roorkee</span></div></footer>
+
 <script>
-document.querySelectorAll('.cite-toggle').forEach(function(button){button.addEventListener('click',function(){const box=button.closest('.pub').querySelector('.citation-box');const open=box.classList.toggle('open');button.setAttribute('aria-expanded',String(open));button.textContent=open?'Hide citation':'Cite this paper';});});
-document.querySelectorAll('.copy-citation').forEach(function(button){button.addEventListener('click',async function(){const text=button.closest('.citation-box').querySelector('p').innerText;try{await navigator.clipboard.writeText(text);button.textContent='Copied!';}catch(e){const area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();button.textContent='Copied!';}setTimeout(()=>button.textContent='Copy citation',1600);});});
+/* Set your public academic email here. The Email row stays hidden until this is filled in. */
+var EMAIL = "";
+
+(function(){
+  if(EMAIL){var l=document.getElementById('emailLink');l.href='mailto:'+EMAIL;l.textContent=EMAIL;document.getElementById('emailRow').hidden=false;}
+
+  // copy citation
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-cite'), done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent='Copy citation'},1600)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done)}
+      else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove();done()}
+    });
+  });
+
+  // active section in the contents list
+  var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});map[e.target.id].classList.add('on')}})},{rootMargin:'-20% 0px -70% 0px'});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
+  }
+
+  // deformation grid: reference grid and its image under F, drawn once on load
+  var svg=document.getElementById('grid'), NS='http://www.w3.org/2000/svg', n=8, s=22, ox=22, oy=30;
+  function el(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e}
+  var ref=el('g',{stroke:'#aab6b8','stroke-width':'1',fill:'none'}), cur=el('g',{stroke:'#1c6a73','stroke-width':'1.6',fill:'none'});
+  svg.appendChild(ref);svg.appendChild(cur);
+  function F(x,y,t){ // stretch + shear + mild nonuniform bulge, t in [0,1]
+    var l=1+0.28*t, sh=0.42*t;
+    var bx=x*l+sh*y, by=y/Math.sqrt(l)+0.10*t*Math.sin(x/s*0.8);
+    return [bx+ (t*8), by + (t*6)];
+  }
+  function line(g,pts){g.appendChild(el('polyline',{points:pts.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ')}))}
+  function draw(t){
+    while(cur.firstChild)cur.removeChild(cur.firstChild);
+    for(var i=0;i<=n;i++){
+      var a=[],b=[];
+      for(var j=0;j<=n*4;j++){var u=j/4;var p=F(i*s,u*s,t);a.push([p[0]+ox,p[1]+oy]);var q=F(u*s,i*s,t);b.push([q[0]+ox,q[1]+oy])}
+      line(cur,a);line(cur,b);
+    }
+  }
+  for(var i=0;i<=n;i++){line(ref,[[ox+i*s,oy],[ox+i*s,oy+n*s]]);line(ref,[[ox,oy+i*s],[ox+n*s,oy+i*s]])}
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){draw(1)}else{
+    var start=null;draw(0);
+    (function step(ts){if(!start)start=ts;var t=Math.min((ts-start)/1700,1);var e=1-Math.pow(1-t,3);draw(e);if(t<1)requestAnimationFrame(step)})(performance.now());
+  }
+})();
 </script>
-
-
-</body></html>
+</body>
+</html>
