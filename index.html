@@ -59,12 +59,21 @@ p{margin:0 0 14px;max-width:68ch}
 .meta{font-family:var(--sans);font-size:13.5px;color:var(--muted)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:40px;align-items:start}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:start}
 .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;max-width:16ch}
 .hero .lede{font-size:20px;line-height:1.55;color:#24363d}
-figure.defo{margin:0}
-figure.defo svg{width:100%;height:auto;display:block}
-figure.defo figcaption{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.45;margin-top:8px}
+figure.figs{margin:0;font-family:var(--sans)}
+.figtabs{display:flex;gap:6px;margin-bottom:8px}
+.figtabs button{font:600 12.5px var(--sans);padding:6px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--panel);color:var(--ink);cursor:pointer}
+.figtabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.figbtn{display:block;width:100%;padding:8px;border:1px solid var(--rule);background:#fff;cursor:zoom-in;border-radius:4px}
+.figbtn img{width:100%;height:auto;max-height:260px;object-fit:contain;display:block}
+dialog#figdlg{max-width:min(1100px,94vw);width:94vw;border:0;border-radius:6px;padding:18px;background:#fff;color:var(--ink)}
+dialog#figdlg::backdrop{background:rgba(10,20,25,.7)}
+dialog#figdlg img{width:100%;height:auto;max-height:78vh;object-fit:contain;display:block}
+dialog#figdlg p{font:14px/1.5 var(--sans);margin:10px 0 0;color:var(--muted);max-width:none}
+dialog#figdlg .x{position:absolute;right:10px;top:6px;font:28px/1 var(--sans);border:0;background:none;cursor:pointer;color:var(--ink)}
+figure.figs figcaption{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.45;margin-top:8px}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin:30px 0 0;border:1px solid var(--rule);background:var(--panel);font-family:var(--sans)}
 .facts div{padding:14px 16px;border-right:1px solid var(--rule)}
 .facts div:last-child{border-right:0}
@@ -104,6 +113,17 @@ figure.defo figcaption{font-family:var(--sans);font-size:12px;color:var(--muted)
 .plain li:first-child{border-top:0}
 .plain em{font-style:italic}
 
+details.abs{margin-top:8px;font-size:16px;max-width:74ch}
+details.abs summary{cursor:pointer;font:600 13px var(--sans);color:var(--accent-ink);padding:4px 0}
+details.abs p{margin:6px 0 0;padding-left:14px;border-left:2px solid var(--rule);color:#2d3f46}
+.demo{background:var(--panel);border:1px solid var(--rule);padding:18px 20px;font-family:var(--sans)}
+.demo .row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px;align-items:center}
+.demo .lab{font-size:12.5px;color:var(--muted);margin-right:4px}
+.demo button{font:600 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:4px;background:var(--paper);color:var(--ink);cursor:pointer}
+.demo button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.demo svg{width:100%;height:auto;display:block;margin-top:6px}
+.demo .read{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+.demo .note{font-size:12.5px;color:var(--muted);margin:10px 0 0;line-height:1.5}
 /* timeline-ish */
 .edu{display:grid;grid-template-columns:120px 1fr;gap:6px 20px;padding:14px 0;border-top:1px solid var(--rule)}
 .edu:first-of-type{border-top:0;padding-top:0}
@@ -132,7 +152,7 @@ footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var
   main{padding:36px 22px 20px}
   footer{margin:0 22px;padding:22px 0 36px}
   .hero{grid-template-columns:1fr}
-  figure.defo{max-width:280px}
+  figure.figs{max-width:520px}
 }
 @media (max-width:600px){
   body{font-size:17px}
@@ -159,6 +179,7 @@ footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var
   <nav class="toc" aria-label="Sections">
     <a href="#summary">Summary</a>
     <a href="#research">Research</a>
+    <a href="#demo">Interactive</a>
     <a href="#publications">Publications</a>
     <a href="#talks">Talks</a>
     <a href="#background">Education &amp; skills</a>
@@ -183,10 +204,12 @@ footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var
       <h1>How rate-dependent materials deform, from theory to simulation.</h1>
       <p class="lede">I build thermodynamically consistent constitutive models for viscoelastic solids at finite deformation. My work links rheological connections, evolving natural configurations and deformation-mode-specific equations, and carries them into parameter identification and finite-element code.</p>
     </div>
-    <figure class="defo">
-      <svg id="grid" viewBox="0 0 250 250" role="img" aria-label="A square reference grid and the same grid after a finite stretch and shear"></svg>
-      <figcaption>A reference grid and its image under a finite deformation, the setting of all the work below.</figcaption>
+    <figure class="figs">
+      <div class="figtabs" role="group" aria-label="Figures from the papers"><button type="button" data-i="0" aria-pressed="true">JMPS</button><button type="button" data-i="1" aria-pressed="false">IJSS</button><button type="button" data-i="2" aria-pressed="false">IJES</button></div>
+      <button type="button" class="figbtn" id="figbtn" aria-label="Enlarge figure"><img id="figimg" src="images/fig-jmps.png" alt="" width="600" height="300"></button>
+      <figcaption id="figcap"></figcaption>
     </figure>
+    <dialog id="figdlg" aria-label="Enlarged figure"><button type="button" class="x" aria-label="Close">×</button><img id="dlgimg" alt=""><p id="dlgcap"></p></dialog>
   </div>
 
   <dl class="facts">
@@ -224,11 +247,11 @@ footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var
   </div>
   <div class="theme">
     <div class="ref">Published<br><a href="https://doi.org/10.1016/j.ijsolstr.2026.114336" target="_blank" rel="noopener">IJSS 2026</a></div>
-    <div><h3>Thermodynamically consistent finite viscoelasticity</h3><p>Finite-deformation viscoelastic models within the theory of evolving natural configurations, covering Maxwell, Zener, Poynting–Thomson and Kelvin–Voigt type behaviour. Particular attention goes to the driving (configurational) force associated with parallel rheological structures. The same formulation gives constitutive equations for anisotropic response.</p></div>
+    <div><h3>Thermodynamically consistent finite viscoelasticity</h3><p>Finite-deformation Kelvin–Voigt type models within the theory of evolving natural configurations, in a stress-space formulation where the rate of dissipation is a convex function of the configurational (driving) forces. Maxwell and Kelvin–Voigt behaviour appear as limits of the Poynting–Thomson and Zener models. The Poynting–Thomson model reproduces polymer data up to a stretch of 9 over stretch rates of 0.2 to 400 s<sup>−1</sup>.</p></div>
   </div>
   <div class="theme">
     <div class="ref">Published<br><a href="https://doi.org/10.1016/j.jmps.2026.106895" target="_blank" rel="noopener">JMPS 2026</a></div>
-    <div><h3>Scalar conjugate pairs and material characterization</h3><p>A deformation mode-specific framework built on scalar, conjugate stress–strain pairs. A QR-based decomposition of the kinematics yields scalar governing equations for selected loading modes. These support analytical solutions and physically meaningful parameter identification for soft materials.</p></div>
+    <div><h3>Scalar conjugate pairs and material characterization</h3><p>A deformation mode-specific framework built on scalar, conjugate stress–strain pairs. A QR-based decomposition of the kinematics yields scalar governing equations for selected loading modes. These support analytical solutions and physically meaningful parameter identification, validated on VHB 4910 elastomer and porcine brain tissue.</p></div>
   </div>
 
   <div class="sub">Ongoing</div>
@@ -242,6 +265,18 @@ footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var
   </div>
 </section>
 
+<section id="demo">
+  <h2>Interactive: loading–unloading response</h2>
+  <p>Computed live from the Zener-II model in my JMPS paper, using the calibrated parameters from its tables. Change the loading rate: faster loading gives a higher peak and a wider hysteresis loop, because the dissipative mechanism has less time to relax.</p>
+  <div class="demo">
+    <div class="row" role="group" aria-label="Test type"><span class="lab">Test</span><button type="button" data-mode="u" aria-pressed="true">Uniaxial stretch (VHB 4910)</button><button type="button" data-mode="s" aria-pressed="false">Simple shear (brain tissue)</button></div>
+    <div class="row" id="rates" role="group" aria-label="Rate"></div>
+    <svg id="plot" viewBox="0 0 520 300" role="img" aria-label="Stress against deformation for a loading–unloading cycle"></svg>
+    <p class="read" id="read" aria-live="polite"></p>
+    <p class="note">Solid line: model response. Dashed line: equilibrium (infinitely slow) response. The curves come from the governing equations of the paper, integrated numerically. They are an illustration, not experimental data.</p>
+  </div>
+</section>
+
 <section id="publications">
   <h2>Publications</h2>
   <p class="meta" style="margin-top:-8px">Full list on <a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>. First-author journal papers are listed first.</p>
@@ -249,16 +284,18 @@ footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var
   <article class="pub">
     <h3>A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain pairs: Applications to characterization of soft materials</h3>
     <p class="by"><strong>T. Singh</strong> and S. Paul</p>
-    <p class="venue"><em>Journal of the Mechanics and Physics of Solids</em>, Article 106895, 2026 <span class="tag">Published</span></p>
+    <p class="venue"><em>Journal of the Mechanics and Physics of Solids</em>, 219 (2027), 106895. Online 31 October 2026 <span class="tag">Published</span></p>
+    <details class="abs"><summary>Key points</summary><p>A viscoelastic framework for soft polymers and biological tissues built on scalar, conjugate stress/strain pairs from a QR (upper-triangular) decomposition of the deformation gradient. Each pair corresponds to one deformation mode (dilatation, squeeze or shear). Finite Maxwell, Poynting–Thomson and two Zener models are derived, with analytical solutions for homogeneous problems. A semi-analytical identification procedure gives parameters with direct physical meaning, and the model is validated against VHB 4910 elastomer and porcine brain tissue data. A noise study shows the procedure is stable up to about 5% noise. <em>Keywords:</em> viscoelasticity, finite strain, elastomers, biological tissues, QR kinematics.</p></details>
     <div class="actions">
       <a href="https://doi.org/10.1016/j.jmps.2026.106895" target="_blank" rel="noopener">DOI</a>
-      <button type="button" class="copy" data-cite="Singh, T., &amp; Paul, S. (2026). A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain pairs: Applications to characterization of soft materials. Journal of the Mechanics and Physics of Solids, 106895. https://doi.org/10.1016/j.jmps.2026.106895">Copy citation</button>
+      <button type="button" class="copy" data-cite="Singh, T., &amp; Paul, S. (2026). A deformation mode-specific constitutive framework for finite viscoelasticity based on scalar, conjugate stress/strain pairs: Applications to characterization of soft materials. Journal of the Mechanics and Physics of Solids, 219, 106895. https://doi.org/10.1016/j.jmps.2026.106895">Copy citation</button>
     </div>
   </article>
   <article class="pub">
     <h3>Constitutive modeling of Kelvin–Voigt type viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations</h3>
     <p class="by"><strong>T. Singh</strong> and S. Paul</p>
-    <p class="venue"><em>International Journal of Solids and Structures</em>, 341, Article 114336, 2026 <span class="tag">Published</span></p>
+    <p class="venue"><em>International Journal of Solids and Structures</em>, 341 (2026), 114336 <span class="tag">Published</span></p>
+    <details class="abs"><summary>Key points</summary><p>Kelvin–Voigt type viscoelastic solids within a Lagrangian framework, using a stress-space formulation in which the rate of dissipation is a convex function of the configurational forces. The Maxwell and Kelvin–Voigt models are recovered as limiting cases of the derived Poynting–Thomson and Zener models. Integration algorithms are given, and the Poynting–Thomson model matches polymer data in uniaxial tension up to a stretch of 9 and over stretch rates from 0.2 to 400 s<sup>−1</sup>. Relaxation behaviour, rate effects and an extension to other material symmetry groups are discussed.</p></details>
     <div class="actions">
       <a href="https://doi.org/10.1016/j.ijsolstr.2026.114336" target="_blank" rel="noopener">DOI</a>
       <button type="button" class="copy" data-cite="Singh, T., &amp; Paul, S. (2026). Constitutive modeling of Kelvin–Voigt type viscoelastic solids undergoing finite deformations using the theory of evolving natural configurations. International Journal of Solids and Structures, 341, 114336. https://doi.org/10.1016/j.ijsolstr.2026.114336">Copy citation</button>
@@ -267,7 +304,8 @@ footer{padding:26px 48px 40px;font-family:var(--sans);font-size:12.5px;color:var
   <article class="pub">
     <h3>On the extension of the concept of rheological connections to a finite deformation framework using multiple natural configurations</h3>
     <p class="by"><strong>T. Singh</strong> and S. Paul</p>
-    <p class="venue"><em>International Journal of Engineering Science</em>, 212, Article 104267, 2025 <span class="tag">Published</span></p>
+    <p class="venue"><em>International Journal of Engineering Science</em>, 212 (2025), 104267 <span class="tag">Published</span></p>
+    <details class="abs"><summary>Key points</summary><p>Series and parallel connections of rheological elements are modelled within the multiple natural configurations framework, without introducing new configurations. The two connections differ only in how stress power is split: by the ratio of rate-of-deformation norms for a series connection, and by the ratio of driving-force norms for a parallel connection. The paper shows why earlier finite-deformation treatments of parallel connections are problematic, and illustrates the theory on a standard linear solid, an elastic–perfectly plastic solid and an elastoplastic solid with hardening.</p></details>
     <div class="actions">
       <a href="https://doi.org/10.1016/j.ijengsci.2025.104267" target="_blank" rel="noopener">DOI</a>
       <button type="button" class="copy" data-cite="Singh, T., &amp; Paul, S. (2025). On the extension of the concept of rheological connections to a finite deformation framework using multiple natural configurations. International Journal of Engineering Science, 212, 104267. https://doi.org/10.1016/j.ijengsci.2025.104267">Copy citation</button>
@@ -345,31 +383,78 @@ var EMAIL = "";
     Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
   }
 
-  // deformation grid: reference grid and its image under F, drawn once on load
-  var svg=document.getElementById('grid'), NS='http://www.w3.org/2000/svg', n=8, s=22, ox=22, oy=30;
-  function el(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e}
-  var ref=el('g',{stroke:'#aab6b8','stroke-width':'1',fill:'none'}), cur=el('g',{stroke:'#1c6a73','stroke-width':'1.6',fill:'none'});
-  svg.appendChild(ref);svg.appendChild(cur);
-  function F(x,y,t){ // stretch + shear + mild nonuniform bulge, t in [0,1]
-    var l=1+0.28*t, sh=0.42*t;
-    var bx=x*l+sh*y, by=y/Math.sqrt(l)+0.10*t*Math.sin(x/s*0.8);
-    return [bx+ (t*8), by + (t*6)];
-  }
-  function line(g,pts){g.appendChild(el('polyline',{points:pts.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ')}))}
-  function draw(t){
-    while(cur.firstChild)cur.removeChild(cur.firstChild);
-    for(var i=0;i<=n;i++){
-      var a=[],b=[];
-      for(var j=0;j<=n*4;j++){var u=j/4;var p=F(i*s,u*s,t);a.push([p[0]+ox,p[1]+oy]);var q=F(u*s,i*s,t);b.push([q[0]+ox,q[1]+oy])}
-      line(cur,a);line(cur,b);
+  // figure viewer
+  (function(){
+    var F=[
+      {src:'images/fig-jmps.png',alt:'Schematic of QR kinematics: configurations and Laplace stretch modes of a representative cube, and the natural configuration obtained by elastic unloading',cap:'JMPS paper, Fig. 1: QR kinematics. (a) Deformation of a representative cube by the components of the Laplace stretch. (b) The natural configuration, reached by instantaneous elastic unloading.',cr:'Singh and Paul, J. Mech. Phys. Solids 219 (2027) 106895.'},
+      {src:'images/fig-ijss.png',alt:'Evolving natural configurations: reference, current and natural configurations with their tangent maps',cap:'IJSS paper, Fig. 1: evolving natural configurations and the tangent maps between the reference, current and natural configurations.',cr:'Singh and Paul, Int. J. Solids Struct. 341 (2026) 114336.'},
+      {src:'images/fig-ijes.png',alt:'Small-strain series and parallel rheological models and the proposed finite-deformation extension',cap:'IJES paper, Fig. 1: small-strain rheological models in series and parallel, and the proposed finite-deformation extension.',cr:'Singh and Paul, Int. J. Eng. Sci. 212 (2025) 104267.'}
+    ];
+    var img=document.getElementById('figimg'),cap=document.getElementById('figcap'),dlg=document.getElementById('figdlg'),cur=0;
+    if(!img)return;
+    function show(i){cur=i;var f=F[i];img.src=f.src;img.alt=f.alt;cap.textContent=f.cap+' '+f.cr;
+      document.querySelectorAll('.figtabs button').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.i===i)})}
+    document.querySelectorAll('.figtabs button').forEach(function(b){b.onclick=function(){show(+b.dataset.i)}});
+    document.getElementById('figbtn').onclick=function(){var f=F[cur];document.getElementById('dlgimg').src=f.src;document.getElementById('dlgimg').alt=f.alt;document.getElementById('dlgcap').textContent=f.cap+' '+f.cr;if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')};
+    dlg.querySelector('.x').onclick=function(){dlg.close?dlg.close():dlg.removeAttribute('open')};
+    dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+    show(0);
+  })();
+
+  // interactive loading-unloading demo (Zener-II, JMPS paper Eqs. 49 and 61, parameters from its Tables 2 and 3)
+  (function(){
+    var M={
+      u:{x0:1,xm:2.5,rates:[0.01,0.03,0.05],xl:'Stretch Λ',yl:'σ₁ (kPa)',N1:268.46,N2:20.12,mu:1.192e4,
+         f:function(x,v,s,p){return -(p.N1/p.mu)*s+(p.N1+2*p.N2/x+4*p.N2*x*x)*v/(2*x)+(p.N1*p.N2/p.mu)*(x*x-1/x)},
+         eq:function(x,p){return p.N2*(x*x-1/x)}},
+      s:{x0:0,xm:1,rates:[30,60,90,120],xl:'Shear γ',yl:'τ₃ (kPa)',N1:1.75,N2:0.0082,mu:0.0225,
+         f:function(x,v,s,p){return -(p.N1/p.mu)*s+(p.N1+8*p.N2*Math.exp(4*x))*v+(2*p.N1*p.N2/p.mu)*Math.exp(4*x)},
+         eq:function(x,p){return 2*p.N2*Math.exp(4*x)}}
+    };
+    var svg=document.getElementById('plot'),ratesEl=document.getElementById('rates'),readEl=document.getElementById('read');
+    if(!svg)return;
+    var mode='u',rate=0.05,pts=[],raf=0,reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function sim(){
+      var p=M[mode],n=600,T=2*(p.xm-p.x0)/rate,dt=T/n,s=0,t=0,out=[[p.x0,0]];
+      function xr(t){return t<=T/2?[p.x0+rate*t,rate]:[p.xm-rate*(t-T/2),-rate]}
+      function F(t,s){var a=xr(t);return p.f(a[0],a[1],s,p)}
+      for(var i=0;i<n;i++){var k1=F(t,s),k2=F(t+dt/2,s+dt*k1/2),k3=F(t+dt/2,s+dt*k2/2),k4=F(t+dt,s+dt*k3);s+=dt*(k1+2*k2+2*k3+k4)/6;t+=dt;out.push([xr(t)[0],s])}
+      return out;
     }
-  }
-  for(var i=0;i<=n;i++){line(ref,[[ox+i*s,oy],[ox+i*s,oy+n*s]]);line(ref,[[ox,oy+i*s],[ox+n*s,oy+i*s]])}
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce){draw(1)}else{
-    var start=null;draw(0);
-    (function step(ts){if(!start)start=ts;var t=Math.min((ts-start)/1700,1);var e=1-Math.pow(1-t,3);draw(e);if(t<1)requestAnimationFrame(step)})(performance.now());
-  }
+    function fmt(v){return v>=10?v.toFixed(0):v>=1?v.toFixed(1):v.toFixed(2)}
+    function frame(k){
+      var p=M[mode],W=520,H=300,l=56,r=14,tp=14,b=42,ymax=0,i;
+      pts.forEach(function(q){if(q[1]>ymax)ymax=q[1]});ymax*=1.12;
+      var X=function(x){return l+(x-p.x0)/(p.xm-p.x0)*(W-l-r)},Y=function(y){return H-b-y/ymax*(H-b-tp)};
+      var g='<g stroke="#d9dfdc" stroke-width="1" font-size="11" fill="#56656b" font-family="Public Sans,sans-serif">';
+      for(i=0;i<=4;i++){var xv=p.x0+(p.xm-p.x0)*i/4,yv=ymax*i/4;
+        g+='<line x1="'+X(xv)+'" y1="'+tp+'" x2="'+X(xv)+'" y2="'+(H-b)+'"/><text x="'+X(xv)+'" y="'+(H-b+16)+'" text-anchor="middle" stroke="none">'+xv.toFixed(2).replace(/0$/,'')+'</text>';
+        g+='<line x1="'+l+'" y1="'+Y(yv)+'" x2="'+(W-r)+'" y2="'+Y(yv)+'"/><text x="'+(l-8)+'" y="'+(Y(yv)+4)+'" text-anchor="end" stroke="none">'+fmt(yv)+'</text>'}
+      g+='<text x="'+((l+W-r)/2)+'" y="'+(H-6)+'" text-anchor="middle" stroke="none" font-size="12">'+p.xl+'</text><text transform="translate(14 '+((tp+H-b)/2)+') rotate(-90)" text-anchor="middle" stroke="none" font-size="12">'+p.yl+'</text></g>';
+      var e='';for(i=0;i<=60;i++){var x=p.x0+(p.xm-p.x0)*i/60;e+=(i?'L':'M')+X(x).toFixed(1)+' '+Y(p.eq(x,p)).toFixed(1)}
+      var d='';for(i=0;i<=k&&i<pts.length;i++)d+=(i?'L':'M')+X(pts[i][0]).toFixed(1)+' '+Y(pts[i][1]).toFixed(1);
+      var q=pts[Math.min(k,pts.length-1)];
+      svg.innerHTML=g+'<path d="'+e+'" fill="none" stroke="#8a9a9d" stroke-width="1.5" stroke-dasharray="5 4"/><path d="'+d+'" fill="none" stroke="#1c6a73" stroke-width="2.4"/><circle cx="'+X(q[0])+'" cy="'+Y(q[1])+'" r="4.5" fill="#1c6a73"/>';
+    }
+    function play(){
+      cancelAnimationFrame(raf);pts=sim();
+      var pk=0;pts.forEach(function(q){if(q[1]>pk)pk=q[1]});
+      readEl.textContent=(mode==='u'?'Stretch rate ':'Shear rate ')+rate+' s⁻¹: peak stress ≈ '+fmt(pk)+' kPa.';
+      if(reduce){frame(pts.length);return}
+      var t0=null,N=pts.length;
+      (function step(ts){if(!t0)t0=ts;var u=Math.min((ts-t0)/2600,1);frame(Math.floor(u*(N-1)));if(u<1)raf=requestAnimationFrame(step)})(performance.now());
+    }
+    function buildRates(){
+      ratesEl.innerHTML='<span class="lab">Rate</span>';
+      M[mode].rates.forEach(function(v){var b=document.createElement('button');b.type='button';b.textContent=v+' s⁻¹';b.setAttribute('aria-pressed',v===rate);b.onclick=function(){rate=v;buildRates();play()};ratesEl.appendChild(b)});
+      var rp=document.createElement('button');rp.type='button';rp.textContent='Replay';rp.onclick=play;ratesEl.appendChild(rp);
+    }
+    document.querySelectorAll('.demo [data-mode]').forEach(function(b){b.onclick=function(){
+      mode=b.getAttribute('data-mode');rate=M[mode].rates[mode==='u'?2:2];
+      document.querySelectorAll('.demo [data-mode]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});buildRates();play()}});
+    buildRates();pts=sim();frame(pts.length);
+    if('IntersectionObserver' in window){var seen=false,io2=new IntersectionObserver(function(es){if(es[0].isIntersecting&&!seen){seen=true;play()}},{threshold:.3});io2.observe(svg)}
+  })();
 })();
 </script>
 </body>
