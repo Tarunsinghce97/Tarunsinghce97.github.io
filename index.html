@@ -207,6 +207,14 @@ h2::after{content:"";display:block;width:46px;height:3px;background:var(--gold);
 .tag{background:#f3e8cd;color:#5a4108}
 @media (max-width:960px){nav.toc a.on{border-bottom-color:var(--gold)}}
 .sub{font-size:16px;font-weight:700;color:var(--ink)}
+/* horizontal tabs: one page shown at a time */
+.tabs{position:sticky;top:0;z-index:20;display:flex;gap:2px;overflow-x:auto;background:#fbfaf6;border-bottom:1px solid var(--rule);margin:-56px -48px 34px;padding:0 48px;font-family:var(--sans);scrollbar-width:thin}
+.tabs a{white-space:nowrap;padding:17px 16px 14px;font-weight:600;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent}
+.tabs a:hover{color:var(--ink)}
+.tabs a[aria-current="page"]{color:#1a2744;border-bottom-color:var(--gold)}
+main>section{padding:0 0 40px;border-top:0}
+main>section[hidden]{display:none}
+@media (max-width:960px){.tabs{margin:-36px -22px 26px;padding:0 14px}}
 </style>
 </head>
 <body>
@@ -220,15 +228,6 @@ h2::after{content:"";display:block;width:46px;height:3px;background:var(--gold);
     <p class="role">PhD scholar, Department of Civil Engineering<br>Indian Institute of Technology Roorkee</p>
   </div>
   <p class="open">Open to postdoctoral positions</p>
-  <nav class="toc" aria-label="Sections">
-    <a href="#summary">Summary</a>
-    <a href="#research">Research</a>
-    <a href="#demo">Interactive</a>
-    <a href="#publications">Publications</a>
-    <a href="#talks">Talks</a>
-    <a href="#background">Education &amp; skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
   <a class="btn" href="cv.pdf" download>Download CV (PDF)</a>
   <div class="side-links">
     <a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -241,6 +240,18 @@ h2::after{content:"";display:block;width:46px;height:3px;background:var(--gold);
 
 <div>
 <main id="main">
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#summary">Home</a>
+  <a href="#research">Research</a>
+  <a href="#demo">Interactive</a>
+  <a href="#publications">Publications</a>
+  <a href="#talks">Talks</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 
 <section id="summary">
   <div class="banner">
@@ -372,13 +383,16 @@ h2::after{content:"";display:block;width:46px;height:3px;background:var(--gold);
   </ul>
 </section>
 
-<section id="background">
+<section id="education">
   <h2>Education</h2>
   <div class="edu"><div class="yr">2023 to present</div><div><h3>PhD, Civil Engineering</h3><p>Indian Institute of Technology Roorkee. Constitutive modelling of rate-dependent materials. Supervisor: Dr. Sandipan Paul.</p></div></div>
-  <div class="edu"><div class="yr">2020 to 2022</div><div><h3>M.Tech., Structural and construction Engineering</h3><p>Dr. B. R. Ambedkar National Institute of Technology Jalandhar. Thesis: carbonation resistance of concrete made with iron slag and recycled concrete aggregate.</p></div></div>
+  <div class="edu"><div class="yr">2020 to 2022</div><div><h3>M.Tech., Structural and Construction Engineering</h3><p>Dr. B. R. Ambedkar National Institute of Technology Jalandhar. Thesis: carbonation resistance of concrete made with iron slag and recycled concrete aggregate.</p></div></div>
   <div class="edu"><div class="yr">2015 to 2019</div><div><h3>B.Tech., Civil Engineering</h3><p>Rewa Engineering College, Rewa, Madhya Pradesh.</p></div></div>
 
-  <h2 style="margin-top:44px">Skills</h2>
+  </section>
+
+<section id="skills">
+  <h2>Skills</h2>
   <div class="skills">
     <div><h3>Scientific computing</h3><p>MATLAB</p></div>
     <div><h3>Finite-element and constitutive implementation</h3><p>Abaqus, UMAT, Fortran, FEniCSx</p></div>
@@ -417,6 +431,20 @@ var EMAIL = "";
       else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove();done()}
     });
   });
+
+  // tab routing
+  (function(){
+    var tabs=[].slice.call(document.querySelectorAll('.tabs a')),panels=[].slice.call(document.querySelectorAll('main>section'));
+    function route(first){
+      var id=(location.hash||'#summary').slice(1);
+      if(!panels.some(function(p){return p.id===id}))id='summary';
+      panels.forEach(function(p){p.hidden=p.id!==id});
+      tabs.forEach(function(a){if(a.getAttribute('href')==='#'+id){a.setAttribute('aria-current','page');try{a.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}else a.removeAttribute('aria-current')});
+      if(!first)window.scrollTo(0,0);
+    }
+    window.addEventListener('hashchange',function(){route(false)});
+    route(true);
+  })();
 
   // active section in the contents list
   var links=[].slice.call(document.querySelectorAll('nav.toc a'));
