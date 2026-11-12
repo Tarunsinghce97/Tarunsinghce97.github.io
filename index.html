@@ -215,6 +215,46 @@ h2::after{content:"";display:block;width:46px;height:3px;background:var(--gold);
 main>section{padding:0 0 40px;border-top:0}
 main>section[hidden]{display:none}
 @media (max-width:960px){.tabs{margin:-36px -22px 26px;padding:0 14px}}
+/* polish: cards, pill tabs, depth, soft motion */
+body{background:linear-gradient(180deg,#fbfaf6 0%,#f1efe7 100%) fixed}
+h2{font-family:var(--serif);font-weight:500;font-size:32px;letter-spacing:-.01em;color:#1a2744}
+.tabs{background:rgba(251,250,246,.9);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--rule);border-bottom:0;gap:6px;padding:10px 48px;margin-bottom:34px}
+.tabs a{padding:9px 16px;border-radius:999px;border-bottom:0;transition:background .2s,color .2s}
+.tabs a:hover{background:#eaeef6;color:#1a2744}
+.tabs a[aria-current="page"]{background:#1a2744;color:#fff;border-bottom:0;box-shadow:0 3px 10px rgba(26,39,68,.25)}
+.banner{border:0;border-radius:14px;box-shadow:0 14px 36px rgba(26,39,68,.15)}
+.banner::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 88% 15%,rgba(212,162,76,.25),transparent 62%);pointer-events:none}
+.ban-h{z-index:2;border-radius:0 10px 10px 0}
+main>section:not([hidden]){animation:rise .5s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.facts{gap:14px;border:0;background:none}
+.facts div,.facts div:last-child{background:#fff;border:1px solid var(--rule);border-top:3px solid var(--gold);border-radius:10px;padding:16px 18px;box-shadow:0 4px 14px rgba(26,39,68,.06)}
+.facts dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:700;color:#7a5a12}
+.looking{border-radius:10px;border:1px solid var(--rule);border-left:4px solid var(--gold);background:linear-gradient(135deg,#fff,#fbf6e9);box-shadow:0 4px 16px rgba(26,39,68,.06)}
+.recent li{background:#fff;border:1px solid var(--rule);border-radius:10px;margin:0 0 10px;padding:12px 16px;box-shadow:0 2px 10px rgba(26,39,68,.05)}
+.recent li:last-child{border-bottom:1px solid var(--rule)}
+.recent time{justify-self:start;align-self:start;height:fit-content;margin-top:3px;padding:2px 10px;border-radius:999px;background:#f6ebcf;color:#6b4d0e;font-weight:700;font-size:12px}
+.theme,.theme:first-of-type{background:#fff;border:1px solid var(--rule)!important;border-radius:12px;padding:22px 24px!important;margin:0 0 16px;box-shadow:0 4px 16px rgba(26,39,68,.06);transition:transform .2s,box-shadow .2s}
+.theme:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(26,39,68,.12)}
+.theme .ref{color:#6b4d0e}
+.pub,.pub:first-of-type{background:#fff;border:1px solid var(--rule)!important;border-left:4px solid var(--gold)!important;border-radius:10px;padding:20px 22px!important;margin:0 0 16px;box-shadow:0 4px 16px rgba(26,39,68,.06);transition:box-shadow .2s}
+.pub:hover{box-shadow:0 12px 28px rgba(26,39,68,.12)}
+.plain li,.plain li:first-child{background:#fff;border:1px solid var(--rule)!important;border-radius:10px;padding:14px 18px;margin:0 0 10px;box-shadow:0 2px 10px rgba(26,39,68,.05)}
+.edu,.edu:first-of-type{background:#fff;border:1px solid var(--rule)!important;border-left:4px solid #24407a!important;border-radius:10px;padding:16px 20px!important;margin:0 0 14px;box-shadow:0 2px 10px rgba(26,39,68,.05)}
+.edu .yr{color:#6b4d0e;font-weight:700}
+.skills>div{background:#fff;border:1px solid var(--rule);border-top:3px solid var(--gold);border-radius:10px;padding:18px 20px;box-shadow:0 4px 14px rgba(26,39,68,.06)}
+.demo{border-radius:14px;box-shadow:0 10px 28px rgba(26,39,68,.09)}
+.contact-list{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:20px 24px;box-shadow:0 4px 16px rgba(26,39,68,.06)}
+.figbtn{border-radius:10px}
+.side{background-image:radial-gradient(circle at 15% 0%,rgba(212,162,76,.2),transparent 42%),linear-gradient(180deg,#1a2744,#24396a)}
+.portrait{box-shadow:0 0 0 6px rgba(212,162,76,.22),0 10px 22px rgba(0,0,0,.3)}
+.side-links a{display:block;padding:2px 0;text-decoration:none}
+.side-links a::after{content:" →";opacity:.55}
+.side-links a:hover{color:var(--gold)}
+.btn{box-shadow:0 5px 14px rgba(0,0,0,.28);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+@media (max-width:960px){.tabs{padding:10px 14px;margin:-36px -22px 26px}}
+@media (prefers-reduced-motion:reduce){main>section{animation:none!important}.theme,.btn{transition:none}}
 </style>
 </head>
 <body>
