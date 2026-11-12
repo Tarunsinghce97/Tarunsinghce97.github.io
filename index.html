@@ -262,6 +262,24 @@ main>section:not([hidden]){animation:rise .5s ease both}
 .gbtn img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s}
 .gal-card:hover .gbtn img{transform:scale(1.05)}
 .gal-card figcaption{padding:9px 12px;font:600 12.5px var(--sans);color:var(--muted)}
+.slider{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:14px;box-shadow:0 10px 28px rgba(26,39,68,.09)}
+.stage{position:relative;background:#0f1a33;border-radius:10px;aspect-ratio:16/10;overflow:hidden}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .35s}
+.stage img.fade{opacity:0}
+.nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:#1a2744;font:400 28px/1 var(--sans);cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);padding:0 0 3px}
+.nav:hover{background:var(--gold)}
+.prev{left:12px}.next{right:12px}
+.count,.playbtn{position:absolute;bottom:12px;z-index:2;background:rgba(26,39,68,.82);color:#fff;font:600 12px var(--sans);padding:5px 11px;border-radius:999px;border:0}
+.count{right:12px}
+.playbtn{left:12px;cursor:pointer}
+.playbtn:hover{background:#1a2744}
+.slcap{font:600 14px var(--sans);color:var(--ink);margin:12px 4px 10px;max-width:none}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 8px;scrollbar-width:thin}
+.thumbs button{flex:0 0 88px;height:62px;padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;opacity:.65;background:#e9ecf2;transition:opacity .2s}
+.thumbs button:hover{opacity:1}
+.thumbs button[aria-current="true"]{border-color:var(--gold);opacity:1}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:600px){.stage{aspect-ratio:4/3}.nav{width:38px;height:38px}}
 </style>
 </head>
 <body>
@@ -432,32 +450,37 @@ main>section:not([hidden]){animation:rise .5s ease both}
 
 <section id="gallery">
   <h2>Gallery</h2>
-  <p>Moments from conferences and from life in the laboratory.</p>
-  <div class="sub">Conferences</div>
-  <div class="gal">
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="iutam.jpeg" alt="Tarun Singh at the IUTAM Symposium, IIT Delhi" loading="lazy" decoding="async"></button><figcaption>IUTAM Symposium, IIT Delhi (2026)</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="incam-2026-portrait-02.jpeg" alt="Portrait at INCAM 2026, IIT Kanpur" loading="lazy" decoding="async"></button><figcaption>INCAM 2026, IIT Kanpur</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="implast-presentation.png" alt="Presenting at IMPLAST 2025, IIT Roorkee" loading="lazy" decoding="async"></button><figcaption>IMPLAST 2025, IIT Roorkee</figcaption></figure>
-</div>
-  <div class="sub">Lab dinners</div>
-  <div class="gal">
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-01.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-02.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-03.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-04.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-05.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-06.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-07.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-08.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-09.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-10.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-11.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
-</div>
-  <div class="sub">In the laboratory</div>
-  <div class="gal">
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-office-01.jpeg" alt="In the research laboratory" loading="lazy" decoding="async"></button><figcaption>In the laboratory</figcaption></figure>
-<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-office-02.jpeg" alt="In the research laboratory" loading="lazy" decoding="async"></button><figcaption>In the laboratory</figcaption></figure>
-</div>
+  <p>Conferences, lab dinners and life in the laboratory. Use the arrows, swipe, or pick a thumbnail.</p>
+  <div class="slider" id="slider" role="group" aria-roledescription="carousel" aria-label="Photo gallery">
+    <div class="stage" tabindex="0" aria-label="Photo, use left and right arrow keys to change">
+      <img id="slimg" src="iutam.jpeg" alt="Tarun Singh at the IUTAM Symposium, IIT Delhi">
+      <button type="button" class="nav prev" aria-label="Previous photo">‹</button>
+      <button type="button" class="nav next" aria-label="Next photo">›</button>
+      <button type="button" class="playbtn" id="slplay" aria-label="Pause slideshow">Pause</button>
+      <span class="count" id="slcount" aria-live="polite"></span>
+    </div>
+    <p class="slcap" id="slcap">IUTAM Symposium, IIT Delhi (2026)</p>
+    <div class="thumbs">
+      <button type="button" data-src="iutam.jpeg" data-alt="Tarun Singh at the IUTAM Symposium, IIT Delhi" data-cap="IUTAM Symposium, IIT Delhi (2026)" aria-label="Show photo 1"><img src="iutam.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="incam.jpeg" data-alt="Tarun Singh at INCAM 2026, IIT Kanpur" data-cap="INCAM 2026, IIT Kanpur" aria-label="Show photo 2"><img src="incam.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="incam-2026-portrait-01.jpeg" data-alt="Portrait at INCAM 2026, IIT Kanpur" data-cap="INCAM 2026, IIT Kanpur" aria-label="Show photo 3"><img src="incam-2026-portrait-01.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="incam-2026-portrait-02.jpeg" data-alt="Portrait at INCAM 2026, IIT Kanpur" data-cap="INCAM 2026, IIT Kanpur" aria-label="Show photo 4"><img src="incam-2026-portrait-02.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="implast-presentation.png" data-alt="Presenting at IMPLAST 2025, IIT Roorkee" data-cap="IMPLAST 2025, IIT Roorkee" aria-label="Show photo 5"><img src="implast-presentation.png" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-01.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 6"><img src="lab-dinner-01.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-02.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 7"><img src="lab-dinner-02.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-03.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 8"><img src="lab-dinner-03.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-04.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 9"><img src="lab-dinner-04.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-05.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 10"><img src="lab-dinner-05.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-06.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 11"><img src="lab-dinner-06.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-07.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 12"><img src="lab-dinner-07.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-08.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 13"><img src="lab-dinner-08.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-09.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 14"><img src="lab-dinner-09.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-10.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 15"><img src="lab-dinner-10.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-dinner-11.jpeg" data-alt="Lab dinner with the research group" data-cap="Lab dinner" aria-label="Show photo 16"><img src="lab-dinner-11.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-office-01.jpeg" data-alt="In the research laboratory" data-cap="In the laboratory" aria-label="Show photo 17"><img src="lab-office-01.jpeg" alt="" loading="lazy" decoding="async"></button>
+      <button type="button" data-src="lab-office-02.jpeg" data-alt="In the research laboratory" data-cap="In the laboratory" aria-label="Show photo 18"><img src="lab-office-02.jpeg" alt="" loading="lazy" decoding="async"></button>
+    </div>
+  </div>
 </section>
 
 <section id="education">
@@ -552,6 +575,35 @@ var EMAIL = "";
     }
     var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(reduce){draw(1)}else{draw(0);var t0=null;(function step(ts){if(!t0)t0=ts;var u=Math.min((ts-t0)/2200,1);draw(1-Math.pow(1-u,3));if(u<1)requestAnimationFrame(step)})(performance.now())}
+  })();
+
+  // gallery slider
+  (function(){
+    var st=document.getElementById('slider');if(!st)return;
+    var th=[].slice.call(st.querySelectorAll('.thumbs button')),img=document.getElementById('slimg'),cap=document.getElementById('slcap'),cnt=document.getElementById('slcount'),play=document.getElementById('slplay'),stage=st.querySelector('.stage');
+    var idx=0,tok=0,hover=false,reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,playing=!reduce;
+    var panel=st.closest('section');
+    function go(i){
+      idx=(i+th.length)%th.length;var b=th[idx],t=++tok;
+      img.classList.add('fade');
+      var n=new Image();n.onload=n.onerror=function(){if(t!==tok)return;img.src=b.dataset.src;img.alt=b.dataset.alt;img.classList.remove('fade')};n.src=b.dataset.src;
+      cap.textContent=b.dataset.cap;cnt.textContent=(idx+1)+' / '+th.length;
+      th.forEach(function(x,k){if(k===idx)x.setAttribute('aria-current','true');else x.removeAttribute('aria-current')});
+      if(!panel.hidden){try{b.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
+      var nx=th[(idx+1)%th.length];(new Image()).src=nx.dataset.src;
+    }
+    th.forEach(function(b,k){b.onclick=function(){go(k)}});
+    st.querySelector('.prev').onclick=function(){go(idx-1)};
+    st.querySelector('.next').onclick=function(){go(idx+1)};
+    stage.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')go(idx-1);else if(e.key==='ArrowRight')go(idx+1)});
+    var x0=null;
+    stage.addEventListener('pointerdown',function(e){x0=e.clientX});
+    stage.addEventListener('pointerup',function(e){if(x0===null)return;var d=e.clientX-x0;x0=null;if(Math.abs(d)>40)go(d<0?idx+1:idx-1)});
+    function label(){play.textContent=playing?'Pause':'Play';play.setAttribute('aria-label',playing?'Pause slideshow':'Play slideshow')}
+    play.onclick=function(){playing=!playing;label()};
+    st.addEventListener('mouseenter',function(){hover=true});st.addEventListener('mouseleave',function(){hover=false});
+    setInterval(function(){if(playing&&!hover&&!panel.hidden&&!document.hidden)go(idx+1)},4500);
+    label();cnt.textContent='1 / '+th.length;th[0].setAttribute('aria-current','true');
   })();
 
   // enlarge research figures
