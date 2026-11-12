@@ -255,6 +255,13 @@ main>section:not([hidden]){animation:rise .5s ease both}
 .btn:hover{transform:translateY(-1px)}
 @media (max-width:960px){.tabs{padding:10px 14px;margin:-36px -22px 26px}}
 @media (prefers-reduced-motion:reduce){main>section{animation:none!important}.theme,.btn{transition:none}}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:6px 0 10px}
+.gal-card{margin:0;background:#fff;border:1px solid var(--rule);border-radius:10px;overflow:hidden;box-shadow:0 4px 14px rgba(26,39,68,.07);transition:transform .2s,box-shadow .2s}
+.gal-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(26,39,68,.16)}
+.gbtn{display:block;width:100%;padding:0;border:0;background:#e9ecf2;cursor:zoom-in;overflow:hidden}
+.gbtn img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s}
+.gal-card:hover .gbtn img{transform:scale(1.05)}
+.gal-card figcaption{padding:9px 12px;font:600 12.5px var(--sans);color:var(--muted)}
 </style>
 </head>
 <body>
@@ -286,6 +293,7 @@ main>section:not([hidden]){animation:rise .5s ease both}
   <a href="#demo">Interactive</a>
   <a href="#publications">Publications</a>
   <a href="#talks">Talks</a>
+  <a href="#gallery">Gallery</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
@@ -422,6 +430,38 @@ main>section:not([hidden]){animation:rise .5s ease both}
   </ul>
 </section>
 
+<section id="gallery">
+  <h2>Gallery</h2>
+  <p>Moments from conferences and from life in the laboratory.</p>
+  <div class="sub">Conferences</div>
+  <div class="gal">
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="iutam.jpeg" alt="Tarun Singh at the IUTAM Symposium, IIT Delhi" loading="lazy" decoding="async"></button><figcaption>IUTAM Symposium, IIT Delhi (2026)</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="incam.jpeg" alt="Tarun Singh at INCAM 2026, IIT Kanpur" loading="lazy" decoding="async"></button><figcaption>INCAM 2026, IIT Kanpur</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="incam-2026-portrait-01.jpeg" alt="Portrait at INCAM 2026, IIT Kanpur" loading="lazy" decoding="async"></button><figcaption>INCAM 2026, IIT Kanpur</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="incam-2026-portrait-02.jpeg" alt="Portrait at INCAM 2026, IIT Kanpur" loading="lazy" decoding="async"></button><figcaption>INCAM 2026, IIT Kanpur</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="implast-presentation.png" alt="Presenting at IMPLAST 2025, IIT Roorkee" loading="lazy" decoding="async"></button><figcaption>IMPLAST 2025, IIT Roorkee</figcaption></figure>
+</div>
+  <div class="sub">Lab dinners</div>
+  <div class="gal">
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-01.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-02.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-03.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-04.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-05.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-06.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-07.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-08.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-09.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-10.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-dinner-11.jpeg" alt="Lab dinner with the research group" loading="lazy" decoding="async"></button><figcaption>Lab dinner</figcaption></figure>
+</div>
+  <div class="sub">In the laboratory</div>
+  <div class="gal">
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-office-01.jpeg" alt="In the research laboratory" loading="lazy" decoding="async"></button><figcaption>In the laboratory</figcaption></figure>
+<figure class="gal-card"><button type="button" class="gbtn" aria-label="Enlarge photo"><img src="lab-office-02.jpeg" alt="In the research laboratory" loading="lazy" decoding="async"></button><figcaption>In the laboratory</figcaption></figure>
+</div>
+</section>
+
 <section id="education">
   <h2>Education</h2>
   <div class="edu"><div class="yr">2023 to present</div><div><h3>PhD, Civil Engineering</h3><p>Indian Institute of Technology Roorkee. Constitutive modelling of rate-dependent materials. Supervisor: Dr. Sandipan Paul.</p></div></div>
@@ -519,7 +559,7 @@ var EMAIL = "";
   // enlarge research figures
   (function(){
     var dlg=document.getElementById('figdlg');if(!dlg)return;
-    document.querySelectorAll('figure.rfig button').forEach(function(b){b.onclick=function(){
+    document.querySelectorAll('figure.rfig button,figure.gal-card button').forEach(function(b){b.onclick=function(){
       var im=b.querySelector('img'),c=b.parentNode.querySelector('figcaption');
       document.getElementById('dlgimg').src=im.src;document.getElementById('dlgimg').alt=im.alt;document.getElementById('dlgcap').textContent=c.textContent;
       if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')}});
