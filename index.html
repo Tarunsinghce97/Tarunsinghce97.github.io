@@ -517,9 +517,10 @@ main>section:not([hidden]){animation:rise .5s ease both}
   <h2>Contact</h2>
   <p>I am happy to hear from principal investigators and research groups about postdoctoral openings, collaborations or questions about this work. My CV has the full details.</p>
   <div class="contact-list">
-    <div id="emailRow" hidden><span>Email</span><a id="emailLink" href="#"></a></div>
+    <div><span>Email</span><a href="mailto:tarun_s@ce.iitr.ac.in">tarun_s@ce.iitr.ac.in</a>, <a href="mailto:tarunsinghce97@gmail.com">tarunsinghce97@gmail.com</a></div>
     <div><span>Affiliation</span>Department of Civil Engineering, IIT Roorkee</div>
     <div><span>CV</span><a href="cv.pdf" download>cv.pdf</a></div>
+    <div><span>Reference</span><a href="https://civil.iitr.ac.in/CE?Uid=sandipan.paul" target="_blank" rel="noopener">Dr. Sandipan Paul</a> (PhD supervisor), Department of Civil Engineering, IIT Roorkee</div>
     <div><span>Profiles</span><a href="https://scholar.google.com/citations?user=Aff7c2IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://orcid.org/0000-0002-6199-8498" target="_blank" rel="noopener">ORCID</a>, <a href="https://www.linkedin.com/in/tarun-singh-733b7a219/" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </section>
@@ -530,11 +531,7 @@ main>section:not([hidden]){animation:rise .5s ease both}
 </div>
 
 <script>
-/* Set your public academic email here. The Email row stays hidden until this is filled in. */
-var EMAIL = "";
-
 (function(){
-  if(EMAIL){var l=document.getElementById('emailLink');l.href='mailto:'+EMAIL;l.textContent=EMAIL;document.getElementById('emailRow').hidden=false;}
 
   // copy citation
   document.querySelectorAll('.copy').forEach(function(b){
